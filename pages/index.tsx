@@ -26,12 +26,11 @@ const Home: NextPage = () => {
         <h1 className="text-red-500">testing</h1>
         <div id="project0" className="bg-green-200">
           <h2>Project 0</h2>
+          <Link href={"/projects/project0"}><a>to project 0</a></Link>
           <button>expand button</button>
-          <p>short description</p>
-          {/* mini icons */}
-          <Tag str="hello world"/>
-          <StringToTags stringArray={["testing","testing again"]} />
-
+          <p>(short description)</p>
+          <StringToTags stringArray={["React", "Sass", "HTML"]} />
+          
         </div>
 
       </div>
