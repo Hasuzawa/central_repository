@@ -7,6 +7,7 @@ import Link from "next/link";
 //import "~/styles/globals.css";  "don't import global css in individual pages"
 import Layout from "~/components/Layout";
 import { Tag, StringToTags } from "~/components/Tag";
+import { Logo } from "~/components/Logo";
 
 
 const Home: NextPage = () => {
@@ -29,8 +30,13 @@ const Home: NextPage = () => {
           <Link href={"/projects/project0"}><a>to project 0</a></Link>
           <button>expand button</button>
           <p>(short description)</p>
-          <StringToTags stringArray={["React", "Sass", "HTML"]} />
-          
+          {/* <StringToTags stringArray={["React", "Sass", "HTML"]} /> */}
+          <Logo str="C++" />
+          <Logo str="C" />
+          <Logo str="Java" />
+          <Logo str="Python" />
+          <Logo str="Javascript" />
+          <Logo str="Typescript" />
         </div>
 
       </div>

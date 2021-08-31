@@ -1,13 +1,22 @@
+import React, { CSSProperties } from "react";
 import Image from "next/image";
-import React from "react";
 
 
 type IconProps = {
-    str: string;
-    id: number;
+    readonly str: string;
+    readonly idx?: number;
+    readonly style?: string;
 }
-
-const Icon = ({str, id}: IconProps) => {
+//@parAm and @parEm are slightly different
+/**
+ * @remarks
+ * string => <Image /> based on built-in mapping, can be used alone or as component.
+ * 
+ * @parem str - the input string
+ * @parem idx - the optional key (when used in mass mapping)
+ * @returns the image corresponding to the input string
+ */
+const Logo = ({str, idx, style}: IconProps) => {
     const table: {[key: string]: JSX.Element} = {
         "C": <Image className="skill_logo" src={"logos/C_logo.svg"} alt="C"/>,
         "C++": <img className="skill_logo" src={"logos/C++_logo.svg"} alt="C++"/>,
@@ -35,17 +44,25 @@ const Icon = ({str, id}: IconProps) => {
         "PostgreSQL": <img className="skill_logo" src={"logos/PostgreSQL_logo.svg"} alt="PostgreSQL"/>
     }
     const map = new Map<string, JSX.Element>([
-        ["C", <Image className="skill_logo" src={"logos/C_logo.svg"} alt="C" />],
-        ["C++", <Image className="skill_logo" src={"logos/C++_logo.svg"} alt="C++" />],
+        ["C", <Image className={style} src={"/../public/logos/C_logo.svg"} alt="C" width="50" height="50" />],
+        ["C++", <Image className={style} src={"/../public/logos/C++_logo.svg"} alt="C++" width="50" height="50" />],
+        ["Java", <Image className={style} src={"/../public/logos/Java_logo.svg"} alt="Java" width="50" height="50" />],
+        ["Javascript", <Image className={style} src={"/../public/logos/Javascript_logo.svg"} alt="Javascript" width="50" height="50" />],
+        ["Python", <Image className={style} src={"/../public/logos/Python_logo.svg"} alt="Python" width="50" height="50" />],
+        ["Typescript", <Image className={style} src={"/../public/logos/Typescript_logo.svg"} alt="Typescript" width="50" height="50" />],
     ]);
 
-    let logo = map.get(str);
+    let logo: JSX.Element | undefined = map.get(str);
+    if (logo == undefined){
+        throw TypeError(`image does not exist for string: ${str}`);
+    }
+    let result: JSX.Element = logo as JSX.Element
 
     return (
         <>
             {/* {table[str]}
             {map.get(str)} */}
-            {React.cloneElement(logo, {key: index})}
+            {React.cloneElement(logo, {key: idx})}
         </>
     );
 }
@@ -54,15 +71,18 @@ type StringToLogosProps = {
     stringArray: string[];
 }
 
-const StringToLogos = (stringArray: {stringArray: string[]}) => {
-    //let abc = ["yolo", "testing"];
-    //abc.map((str) => <span>str</span>);
+// const StringToLogos = (stringArray: {stringArray: string[]}) => {
+//     //let abc = ["yolo", "testing"];
+//     //abc.map((str) => <span>str</span>);
 
-    function toLogo(str: string, id: number){
-        let icon = <Icon str={str} id={id} />
-        return icon;
-    }
-    return (
-        {stringArray.map((str: string, idx: number) => <Icon str={str} id={idx}/>)}
-    );
-}
+//     function toLogo(str: string, idx: number){
+//         let icon = <Logo str={str} idx={idx} />
+//         return icon;
+//     }
+//     return (
+//         {stringArray.map((str: string, idx: number) => <Logo str={str} idx={idx}/>)}
+//     );
+// }
+
+export { Logo };
+//export { StringToLogos };

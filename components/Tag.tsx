@@ -5,7 +5,7 @@ type TagProps = {
 
 const Tag = ({str, id}: TagProps): JSX.Element => {
     return (
-        <span className="text-white bg-blue-500 rounded-full px-1.5 cursor-default">{str}</span>
+        <span className="text-white bg-blue-500 rounded-full px-1.5 cursor-default" id={id}>{str}</span>
     );
 }
 
