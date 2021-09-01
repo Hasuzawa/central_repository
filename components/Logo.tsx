@@ -20,23 +20,8 @@ type IconProps = {
  * @returns the image corresponding to the input string
  */
 const Logo = ({str, idx, className}: IconProps) => {
-    // const table: {[key: string]: JSX.Element} = {
-    //     "C": <Image className="skill_logo" src={"logos/C_logo.svg"} alt="C"/>,
-    //     "C++": <img className="skill_logo" src={"logos/C++_logo.svg"} alt="C++"/>,
-    //     "Java": <img className="skill_logo" src={"logos/Java_logo.svg"} alt="Java"/>,
-    //     "JavaScript": <img className="skill_logo" src={"logos/Javascript_logo.svg"} alt="JavaScript"/>,
-    //     "Python": <img className="skill_logo" src={"logos/Python_logo.svg"} alt="Python"/>,
     //     "TypeScript": <img className="skill_logo" src={"logos/Typescript_logo.svg"} alt="TypeScript"/>,
-
-
-    //     "HTML": <img className="skill_logo" src={"logos/HTML5_logo.svg"} alt="HTML"/>,
-    //     "CSS": <img className="skill_logo" src={"logos/CSS3_logo.svg"} alt="CSS"/>,
-    //     "React": <img className="skill_logo" src={"logos/React_logo.svg"} alt="React"/>,
-    //     "Sass": <img className="skill_logo" style={{"width": "80px"}} src={"logos/Sass_logo.svg"} alt="Sass"/>,
     //     "Django": <img className="skill_logo" style={{"width": "100px"}} src={"logos/Django_logo.svg"} alt="Django"/>,
-
-    //     "Gimp": <img className="skill_logo" src={"logos/Gimp_logo.svg"} alt="Gimp" style={{objectFit: "contain"}}/>,
-    //     "Inkscape": <img className="skill_logo" src={"logos/Inkscape_logo.svg"} alt="Inkscape"/>,
 
     //     "GraphQL": <img className="skill_logo" src={"logos/GraphQL_logo.svg"} alt="GraphQL"/>,
     //     "Graphene-django":<img className="skill_logo" src={"logos/Graphene-django_logo.svg"} alt="Graphene-django"/>,
@@ -46,13 +31,27 @@ const Logo = ({str, idx, className}: IconProps) => {
 
     //     "PostgreSQL": <img className="skill_logo" src={"logos/PostgreSQL_logo.svg"} alt="PostgreSQL"/>
     // }
+    const standardProps: {width: string, height: string} = {width: "50", height: "50"};
     const map = new Map<string, JSX.Element>([
-        ["C", <Image src={"/logos/C_logo.svg"} alt="C" width="50" height="50" />],
-        ["C++", <Image src={"/logos/C++_logo.svg"} alt="C++" width="50" height="50" />],
-        ["Java", <Image src={"/logos/Java_logo.svg"} alt="Java" width="50" height="50" />],
-        ["Javascript", <Image src={"/logos/Javascript_logo.svg"} alt="Javascript" width="50" height="50" />],
-        ["Python", <Image src={"/logos/Python_logo.svg"} alt="Python" width="50" height="50" />],
-        ["Typescript", <Image src={"/logos/Typescript_logo.svg"} alt="Typescript" width="50" height="50" />],
+        ["C", <Image src={"/logos/C_logo.svg"} alt="C" {...standardProps} />],
+        ["C++", <Image src={"/logos/C++_logo.svg"} alt="C++" {...standardProps} />],
+        ["Java", <Image src={"/logos/Java_logo.svg"} alt="Java" {...standardProps} />],
+        ["Javascript", <Image src={"/logos/Javascript_logo.svg"} alt="Javascript" {...standardProps} />],
+        ["Python", <Image src={"/logos/Python_logo.svg"} alt="Python" {...standardProps} />],
+        ["Typescript", <Image src={"/logos/Typescript_logo.svg"} alt="Typescript" {...standardProps} />],
+
+        ["HTML", <Image src={"/logos/HTML_logo.svg"} alt="HTML" {...standardProps} />],
+        ["CSS", <Image src={"/logos/CSS_logo.svg"} alt="CSS" {...standardProps} />],
+        ["React", <Image src={"/logos/React_logo.svg"} alt="React" {...standardProps} />],
+        ["Sass", <Image src={"/logos/Sass_logo.svg"} alt="Sass" {...standardProps} />],
+        ["Django", <Image src={"/logos/Django_logo.svg"} alt="Django" width="95" height="33" />],
+        ["Nextjs", <Image src={"/logos/Nextjs_logo.svg"} alt="Nextjs" {...standardProps} />],
+        ["Tailwind", <Image src={"/logos/Tailwind_logo.svg"} alt="Tailwind" {...standardProps} />],
+
+        ["Gimp", <Image src={"/logos/Gimp_logo.svg"} alt="Gimp" {...standardProps} />],
+        ["Inkscape", <Image src={"/logos/Inkscape_logo.svg"} alt="Inkscape" {...standardProps} />],
+
+
     ]);
 
     let logo: JSX.Element | undefined = map.get(str);
