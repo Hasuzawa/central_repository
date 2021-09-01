@@ -7,7 +7,7 @@ import Link from "next/link";
 //import "~/styles/globals.css";  "don't import global css in individual pages"
 import Layout from "~/components/Layout";
 import { Tag, StringToTags } from "~/components/Tag";
-import { Logo } from "~/components/Logo";
+import { Logo, StringToLogos} from "~/components/Logo";
 
 
 const Home: NextPage = () => {
@@ -37,6 +37,7 @@ const Home: NextPage = () => {
           <Logo str="Python" />
           <Logo str="Javascript" />
           <Logo str="Typescript" />
+          <StringToLogos stringArray={["C", "C++", "Javascript"]} />
         </div>
 
       </div>
