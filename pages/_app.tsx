@@ -1,5 +1,5 @@
 import '~/styles/globals.css'
-import "tailwindcss/tailwind.css";
+import "tailwindcss/tailwind.css"
 
 import type { AppProps } from 'next/app'
 
@@ -7,7 +7,9 @@ import React from "react";
 import useDarkMode from '~/components/hooks/useDarkMode';
 import DarkModeContext from '~/components/context/DarkModeContext';
 
+
 function MyApp({ Component, pageProps }: AppProps) {
+  //this hook is site-wide.
   const [inDarkMode, setDarkMode] = useDarkMode();
 
   return (
@@ -17,4 +19,5 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp
+
+export default MyApp;

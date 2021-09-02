@@ -1,6 +1,8 @@
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
 
 /**
+ * @remarks
+ * do not use this hook in component, use context instead. This is only meant for _app.tsx
  * 
  * @returns a tuple of dark mode state and its setter
  */

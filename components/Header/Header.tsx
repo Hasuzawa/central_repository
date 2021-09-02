@@ -1,12 +1,19 @@
-import { Dispatch, SetStateAction}from "react";
+
+import { useContext, Dispatch, SetStateAction} from "react";
+import DarkModeContext from "../context/DarkModeContext";
 import useDarkMode from "~/components/hooks/useDarkMode";
 
-type headerProps = {
-    inDarkMode: boolean;
-    setDarkMode: Dispatch<SetStateAction<boolean>>;
-};
+import Link from "next/link";
 
-const Header = ({inDarkMode, setDarkMode}: headerProps): JSX.Element => {
+// type headerProps = {
+//     inDarkMode: boolean;
+//     setDarkMode: Dispatch<SetStateAction<boolean>>;
+// };
+
+const Header = (): JSX.Element => {
+    const darkModeContext = useContext(DarkModeContext);
+    const inDarkMode = darkModeContext.inDarkMode;
+    const setDarkMode = darkModeContext.setDarkMode;
 
     return (
         <div id="header" className="flex-none h-1/10 w-screen flex flex-row">
@@ -14,8 +21,10 @@ const Header = ({inDarkMode, setDarkMode}: headerProps): JSX.Element => {
             <span>day/night button</span>
             <button onClick={ () => setDarkMode(!inDarkMode)}>toggle dark mode</button>
             <p className="dark:text-green-500">current dark mode value is {inDarkMode.toString()}</p>
+            <Link href="/projects/project0"><a><span>to next page</span></a></Link>
         </div>
     );
 }
+
 
 export default Header;

@@ -1,4 +1,5 @@
 import Status from "~/components/Project/Status";
+import { StringToTags } from "~/components/Tag";
 
 type ProjectProps = {
     readonly header: string;
@@ -9,11 +10,11 @@ type ProjectProps = {
 
 const Project = ({header, status, short_description, stringArray}: ProjectProps): JSX.Element => {
     return (
-        <div>
+        <div className="flex-none w-9/10 h-3/10 border-2 border-black">
             <h1>{header}</h1>
             <Status str={status}/>
-
-
+            <p className="">{short_description}</p>
+            <StringToTags stringArray={stringArray} />
         </div>
     );
 }
