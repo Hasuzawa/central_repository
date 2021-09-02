@@ -5,21 +5,23 @@ type TagProps = {
 }
 
 const Tag = ({str, idx, className}: TagProps): JSX.Element => {
+    let commonProps = className ? className : "";
     return (
-        <span className="text-white bg-blue-500 rounded-full px-1.5 cursor-default" id={idx?.toString()}>{str}</span>
+        <span className={"text-white bg-blue-500 rounded-full px-1.5 cursor-default" + ` ${commonProps}`} id={idx?.toString()}>{str}</span>
     );
 }
 
 type StringToTagsProps = {
     stringArray: string[];
-    className?: string;
+    containerClassName?: string;
+    tagsClassName ?: string;
 }
 
-const StringToTags = ({stringArray}: StringToTagsProps): JSX.Element => {
+const StringToTags = ({stringArray, containerClassName, tagsClassName}: StringToTagsProps): JSX.Element => {
     return (
-        <>
-            {stringArray.map((str: string, idx: number) => <Tag str={str} key={idx} idx={idx}/>)}
-        </>
+        <div className={"flex flex-row w-full justify-evenly items-center " + (containerClassName ? containerClassName : "")}>
+            {stringArray.map((str: string, idx: number) => <Tag str={str} key={idx} idx={idx} className={tagsClassName}/>)}
+        </div>
     );
 }
 

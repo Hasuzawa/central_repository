@@ -16,7 +16,7 @@ const Header = (): JSX.Element => {
     const setDarkMode = darkModeContext.setDarkMode;
 
     return (
-        <div id="header" className="flex-none h-1/10 w-screen flex flex-row">
+        <div id="header" className="flex-none h-16 w-screen flex flex-row border-b-2 border-black shadow_around">
             <span>logo</span>
             <span>day/night button</span>
             <button onClick={ () => setDarkMode(!inDarkMode)}>toggle dark mode</button>

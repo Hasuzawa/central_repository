@@ -3,8 +3,10 @@ import Project from "~/components/Project/Project";
 
 const Projects = () => {
     return (
+        //justify will cause scroll to become invalid, because it is as if all items are wrapped in a position: relative box. Overflow
+        //won't trigger scrolls and overflowed content is not visible within parent.
         <div id="projects" className="w-screen h-full lg:w-2/5 mx-auto bg-yellow-200 flex flex-col-reverse items-center gap-y-4
-            overflow-x-hidden overflow-y-scroll">
+            overflow-x-hidden overflow-y-auto">
             <Project
                 header="Project 0: Website with React"
                 status="completed"
