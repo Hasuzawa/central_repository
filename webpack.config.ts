@@ -9,6 +9,7 @@ const config: webpack.Configuration = {
             "~/styles": path.resolve(__dirname, "styles/"),
             "~/components": path.resolve(__dirname, "components/"),
             "~/public": path.resolve(__dirname, "public/"),
+            "~/pages": path.resolve(__dirname, "pages/"),
         },
         extensions: [".css", ".sass", ".scss", "tsx"]
     },

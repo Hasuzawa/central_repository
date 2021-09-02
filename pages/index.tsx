@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import Head from 'next/head';
 import Image from 'next/image';
@@ -16,10 +16,15 @@ import Header from "~/components/Header/Header";
 import Footer from "~/components/Footer/Footer";
 
 import useDarkMode from "~/components/hooks/useDarkMode";
+//import { DarkModeContext } from "~/pages/_app";
+import DarkModeContext from '~/components/context/DarkModeContext';
+
 
 //in next js each page is separate, so I need to put global variables in localStorage to be accessible to every page
 const Home: NextPage = () => {
   const [inDarkMode, setDarkMode] = useDarkMode();
+  const abc = useContext(DarkModeContext);
+
 
   return (
     <div className={"h-screen w-screen flex flex-col bg-gray-500" + (inDarkMode ? " dark" : "")}>
@@ -53,6 +58,8 @@ const Home: NextPage = () => {
           <div className="flex-none  w-9/10 bg-red-500">
             <h2>Porject 2</h2>
           </div>
+          <span>the value of abc is {abc.inDarkMode.toString()}</span>
+          <button onClick={ () => abc.setDarkMode(!abc.inDarkMode)}>click me to change context dark mode value</button>
 
           {/* <h1 className="text-red-500">testing</h1>
           <div id="project0" className="bg-green-200">

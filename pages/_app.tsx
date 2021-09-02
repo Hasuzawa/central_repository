@@ -3,11 +3,18 @@ import "tailwindcss/tailwind.css";
 
 import type { AppProps } from 'next/app'
 
-import { useState } from "react";
+import React from "react";
+import useDarkMode from '~/components/hooks/useDarkMode';
+import DarkModeContext from '~/components/context/DarkModeContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [count, setCount] = useState<number>(0);
-  return <Component {...pageProps} count={count} setCount={setCount}/>;
+  const [inDarkMode, setDarkMode] = useDarkMode();
+
+  return (
+    <DarkModeContext.Provider value={{inDarkMode, setDarkMode}} >
+      <Component />
+    </DarkModeContext.Provider>
+  );
 }
 
 export default MyApp
