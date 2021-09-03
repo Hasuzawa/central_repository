@@ -20,7 +20,7 @@ const TableOfContent = () => {
     }
 
     return (
-        <div className="flex flex-col p-4">
+        <div className="flex flex-col p-4 overflow-x-hidden overflow-y-auto">
             <h1 className="self-center">Table of Content</h1>
             <ul>
                 {result}

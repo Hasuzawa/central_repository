@@ -32,8 +32,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main id="main" className="flex-grow flex-shrink flex flex-row">
-        <div id="main-left" className="hidden md:block flex-1 border-r-2 border-black">
+      <main id="main" className=" flex flex-row content-height">
+        <div id="main-left" className="hidden md:block flex-1 height-full border-r-2 border-black min-w-0 min-h-0">
           <TableOfContent />
         </div>
         <div id="main-middle" className="flex-none w-screen md:w-3/5 lg:w-2/5 h-full">

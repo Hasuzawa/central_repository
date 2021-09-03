@@ -13,7 +13,7 @@ const Entry = ({HTML_id, heading}: EntryProps) => {
         <li
             onMouseOver={ () => scrollToById(HTML_id)}
             onClick={ () => scrollToById(HTML_id)}
-            className="cursor-pointer hover:bg-gray-200"
+            className="cursor-pointer hover:bg-gray-300 truncate"
         >
             {heading}
         </li>

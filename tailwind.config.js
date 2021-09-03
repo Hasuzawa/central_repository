@@ -18,7 +18,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      margin: ["responsive", "hover", "first", "last"]
+      margin: ["responsive", "hover", "first", "last"],
+      ringWidth: ["hover"],
     },
   },
   plugins: [],

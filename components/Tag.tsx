@@ -7,7 +7,7 @@ type TagProps = {
 const Tag = ({str, idx, className}: TagProps): JSX.Element => {
     let commonProps = className ? className : "";
     return (
-        <span className={"text-white bg-blue-500 rounded-full px-1.5 cursor-default" + ` ${commonProps}`} id={idx?.toString()}>{str}</span>
+        <span className={"text-white bg-blue-500 rounded-full px-1.5" + ` ${commonProps}`} id={idx?.toString()}>{str}</span>
     );
 }
 
