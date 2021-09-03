@@ -8,7 +8,9 @@ import Link from "next/link";
 //import "~/styles/globals.css";  "don't import global css in individual pages"
 
 import Header from "~/components/Header/Header";
+import TableOfContent from '~/components/TableOfContent/TableOfContent';
 import Projects from '~/components/Project/Projects';
+import Introduction from '~/components/Introduction/Introduction';
 import Footer from "~/components/Footer/Footer";
 
 //import { DarkModeContext } from "~/pages/_app";
@@ -30,12 +32,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main id="main" className="flex-grow flex-row">
-        <div id="main-left" className="hidden lg:block flex-1"></div>
-        <span>testing</span>
-          {/* <Projects /> */}
+      <main id="main" className="flex-grow flex-shrink flex flex-row">
+        <div id="main-left" className="hidden lg:block flex-1 border-r-2 border-black">
+          <TableOfContent />
+        </div>
+          <Projects />
 
-        <div id="main-right" className="hidden lg:block flex-1 "></div>
+        <div id="main-right" className="hidden lg:block flex-1 border-l-2 border-black">
+          <Introduction />
+        </div>
       </main>
       <Footer />
     </div>

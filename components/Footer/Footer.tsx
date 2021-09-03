@@ -3,7 +3,7 @@
 const Footer = (): JSX.Element => {
 
     return (
-        <div id="footer" className={"flex-none h-16 w-screen border-t-2 border-black shadow_around"}>
+        <div id="footer" className={"flex-none h-16 w-screen border-t-2 border-black shadow_around z-50"}>
             <span>this is footer</span>
         </div>
     );
