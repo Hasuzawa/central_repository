@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <DarkModeContext.Provider value={{inDarkMode, setDarkMode}} >
-      <Component />
+      <Component {...pageProps}/>
     </DarkModeContext.Provider>
   );
 }

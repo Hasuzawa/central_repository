@@ -23,14 +23,9 @@ const Logo = ({str, idx, className}: IconProps) => {
     //     "TypeScript": <img className="skill_logo" src={"logos/Typescript_logo.svg"} alt="TypeScript"/>,
     //     "Django": <img className="skill_logo" style={{"width": "100px"}} src={"logos/Django_logo.svg"} alt="Django"/>,
 
-    //     "GraphQL": <img className="skill_logo" src={"logos/GraphQL_logo.svg"} alt="GraphQL"/>,
-    //     "Graphene-django":<img className="skill_logo" src={"logos/Graphene-django_logo.svg"} alt="Graphene-django"/>,
-    //     "Apollo":<img className="skill_logo" src={"logos/Apollo_logo.svg"} alt="Apollo"/>,
-
     //     "Apache": <img className="skill_logo" src={"logos/Apache_logo.png"} alt="Apache"/>,
-
     //     "PostgreSQL": <img className="skill_logo" src={"logos/PostgreSQL_logo.svg"} alt="PostgreSQL"/>
-    // }
+
     const standardProps: {width: string, height: string} = {width: "50", height: "50"};
     const map = new Map<string, JSX.Element>([
         ["C", <Image src={"/logos/C_logo.svg"} alt="C" {...standardProps} />],
@@ -51,7 +46,10 @@ const Logo = ({str, idx, className}: IconProps) => {
         ["Gimp", <Image src={"/logos/Gimp_logo.svg"} alt="Gimp" {...standardProps} />],
         ["Inkscape", <Image src={"/logos/Inkscape_logo.svg"} alt="Inkscape" {...standardProps} />],
 
-
+        ["GraphQL", <Image src={"/logos/GraphQL_logo.svg"} alt="GraphQL" {...standardProps} />],
+        ["Graphene-django", <Image src={"/logos/Graphene-django_logo.svg"} alt="Graphene-django" {...standardProps} />],
+        ["Apollo", <Image src={"/logos/Apollo_logo.svg"} alt="Apollo" {...standardProps} />],
+        
     ]);
 
     let logo: JSX.Element | undefined = map.get(str);
