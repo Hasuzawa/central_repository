@@ -1,4 +1,4 @@
-import projects from "~/public/data/projects";
+import projects from "~/public/staticData/projects";
 import Dashline from "~/components/TableOfContent/Dashline";
 import Entry from "~/components/TableOfContent/Entry";
 

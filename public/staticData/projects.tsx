@@ -1,17 +1,20 @@
 interface Project{
-    HTML_id: string;
-    heading: string;
-    year: string;
-    status: "completed" | "in progress" | "on hiatus" | "in design";
-    short_description: string;
-    stringArray: string[];
-    page_URL?: string;
-    long_description?: string;
-    logoArray?: string[];
+    projectName: string;    //used in URL path and will be visible in address bar, also used in linking, router
+    HTML_id: string;        //used in HTML tree and scrolling
+    heading: string;        //used in both listing and each project page
+    year: string;           //used for chronological listing, type in /[0-9]{4}/ format
+    status: "completed" | "in progress" | "on hiatus" | "in design";    //used in overview and page
+    short_description: string;  //used in overview
+    stringArray: string[];  //used in overview
+
+    //page_URL?: string;      
+    long_description?: string;      //used in page
+    logoArray?: string[];           //used in page
 }
 
 const projects: Project[] = [
     {
+        projectName: "testing",
         HTML_id: "project-4",
         heading: "testing testing testing testing testing testing testing testing testing testing testing testing",
         year: "2021",
@@ -21,6 +24,7 @@ const projects: Project[] = [
         stringArray: ["Nextjs","Tailwind",""],
     },
     {
+        projectName: "project-3-simple-app",
         HTML_id: "project-3",
         heading: "App with Next.js & Tailwind CSS",
         year: "2021",
@@ -29,11 +33,11 @@ const projects: Project[] = [
         short_description: "",
         stringArray: ["Nextjs","Tailwind",""],
         
-        page_URL: "",
         long_description: "",
         logoArray: [],
     },
     {
+        projectName: "project-2-pizzeria",
         HTML_id: "project-2",
         heading: "Pizzeria Reservation with Django, Graphene & React",
         year: "2021",
@@ -43,6 +47,7 @@ const projects: Project[] = [
         stringArray: ["Django", "Graphene", "GraphQL"],
     },
     {
+        projectName: "project-1-ecommerce",
         HTML_id: "project-1",
         heading: "Simulated Online Store with React, Bootstrap & Django",
         year: "2021",
@@ -53,6 +58,7 @@ const projects: Project[] = [
 
     },
     {
+        projectName: "project-0-homepage",
         HTML_id: "project-0",
         heading: "Website with React & Sass",
         year: "2021",
@@ -60,11 +66,11 @@ const projects: Project[] = [
         status: "completed",
         short_description: "my first project using React, HTML and Sass to build to my homepage.",
         stringArray: ["React","Sass","HTML"],
-        
-        page_URL: "",
+
         long_description: "",
         logoArray: [],
     },
 ];
 
 export default projects;
+export type { Project };
