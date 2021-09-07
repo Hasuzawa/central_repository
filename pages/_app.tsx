@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 
 import React from "react";
 import useDarkMode from '~/components/hooks/useDarkMode';
-import DarkModeContext from '~/components/context/DarkModeContext';
+import DarkModeContext from '~/components/contexts/DarkModeContext';
 
 
 function MyApp({ Component, pageProps }: AppProps) {

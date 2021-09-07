@@ -1,16 +1,16 @@
 interface Project{
-    projectName: string;    //used in URL path and will be visible in address bar, also used in linking, router
-    HTML_id: string;        //used in HTML tree and scrolling
-    heading: string;        //used in both listing and each project page
-    year: string;           //used for chronological listing, type in /[0-9]{4}/ format
-    status: "completed" | "in progress" | "on hiatus" | "in design";    //used in overview and page
-    short_description: string;  //used in overview
-    stringArray: string[];  //used in overview
+    readonly projectName: string;    //used in URL path and will be visible in address bar, also used in linking, router
+    readonly HTML_id: string;        //used in HTML tree and scrolling
+    readonly heading: string;        //used in both listing and each project page
+    readonly year: string;           //used for chronological listing, type in /[0-9]{4}/ format
+    readonly status: "completed" | "in progress" | "on hiatus" | "in design";    //used in overview and page
+    readonly short_description: string;  //used in overview
+    readonly stringArray: string[];  //used in overview
 
     //page_URL?: string;      
-    long_description?: string;      //used in page
-    logoArray?: string[];           //used in page
-    gitHubLink?: string;            //used to link to repository on GitHub in page
+    readonly long_description?: string;      //used in page
+    readonly logoArray?: string[];           //used in page
+    readonly gitHubLink?: string;            //used to link to repository on GitHub in page
 }
 
 const projects: Project[] = [

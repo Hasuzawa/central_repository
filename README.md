@@ -21,10 +21,14 @@ This project features:
         worked on it. This is not quite relevant here but it is definitely a great plus in collaboration or real workplace.
     </li>
     <li>
-        during the implementation of dark mode I switched from using hooks, to localStorage, and finally to context at a top-level component. It ought to be site-wide even when local storage is not allowed.
+        during the implementation of dark mode I switched from using hooks, to localStorage, and finally to context at a top-level component. It ought to be site-wide even when local storage is not allowed. Then, I refactored it multiple times, it is not difficult to implement dark mode, but to keep it maintainable without transversing the whole tree takes some work.
     </li>
     <li>
-        pre-rendering done.
+        pre-rendering done. I can see that this feature is going to be decisive for large sites that depends on a lot of API.
+    </li>
+    <li>
+        There seems to be a lot of directories for quite a simple app, but I want to keep this scalable.
+        I know from first-hand experience that as an app grows, it becomes more and more difficult to move and modify files without breaking things.
     </li>
 
     

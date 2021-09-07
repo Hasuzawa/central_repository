@@ -10,6 +10,7 @@ const config: webpack.Configuration = {
             "~/components": path.resolve(__dirname, "components/"),
             "~/public": path.resolve(__dirname, "public/"),
             "~/pages": path.resolve(__dirname, "pages/"),
+            "~/darkModeCSS": path.resolve(__dirname, "darkModeCSS/"),
         },
         extensions: [".css", ".sass", ".scss", "tsx"]
     },

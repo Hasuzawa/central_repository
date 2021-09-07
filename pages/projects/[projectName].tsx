@@ -9,7 +9,7 @@ import projects, { Project } from "~/public/staticData/projects";
 import Header from "~/components/Header/Header";
 import Footer from "~/components/Footer/Footer";
 
-import darkModeClassName from "~/components/context/darkModeClassName";
+import getDarkModeClassName from "darkModeCSS/darkModeClassNames";
 
 interface ProjectPageProps{
     props: {
@@ -29,7 +29,7 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
     const project = props.data.project;
 
     return (
-        <div className={"flex flex-col w-screen h-screen" + darkModeClassName()}>
+        <div className={"flex flex-col w-screen h-screen" + getDarkModeClassName("page")}>
             <Head>
                 <title>{project.projectName}</title>
                 {/* <title>Create Next App</title>

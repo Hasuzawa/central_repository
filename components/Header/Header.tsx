@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import DarkModeContext from "../context/DarkModeContext";
+import DarkModeContext from "../contexts/DarkModeContext";
 
 const Header = (): JSX.Element => {
     const darkModeContext = useContext(DarkModeContext);
@@ -7,7 +7,7 @@ const Header = (): JSX.Element => {
     const setDarkMode = darkModeContext.setDarkMode;
 
     return (
-        <div id="header" className="h-16 w-screen flex-none sticky top-0 flex flex-row border-b-2 border-black shadow_around z-50 dark:bg-black dark:text-white">
+        <div id="header" className="h-16 w-screen flex-none sticky top-0 flex flex-row border-b-2 border-black shadow_around z-50 dark:bg-black dark:text-white dark:border-white">
             <span>logo</span>
             <span>day/night button</span>
             <button
