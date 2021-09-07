@@ -66,3 +66,16 @@ html{
 .content-height{
     height: calc(100vh - 8em);
 }
+
+.darkMode-btn{
+    width: 100px;
+    height: 100px;
+}
+
+.sun-btn{
+    background-image: url("../public/logos/C_logo.svg");
+}
+
+.moon-btn{
+    background-image: url("../public/logos/Java_logo.svg");
+}

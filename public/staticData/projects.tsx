@@ -10,6 +10,7 @@ interface Project{
     //page_URL?: string;      
     long_description?: string;      //used in page
     logoArray?: string[];           //used in page
+    gitHubLink?: string;            //used to link to repository on GitHub in page
 }
 
 const projects: Project[] = [
@@ -35,6 +36,7 @@ const projects: Project[] = [
         
         long_description: "",
         logoArray: [],
+        gitHubLink: "https://github.com/Hasuzawa/central_repository"
     },
     {
         projectName: "project-2-pizzeria",
@@ -55,7 +57,7 @@ const projects: Project[] = [
         status: "on hiatus",
         short_description: "a full stack project with React as frontend and Django as backend.",
         stringArray: ["React", "Django", "Bootstrap"],
-
+        gitHubLink: ""
     },
     {
         projectName: "project-0-homepage",
@@ -69,6 +71,7 @@ const projects: Project[] = [
 
         long_description: "",
         logoArray: [],
+        gitHubLink: "https://github.com/Hasuzawa/homepage"
     },
 ];
 
