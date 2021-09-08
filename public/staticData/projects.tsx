@@ -1,4 +1,5 @@
 interface Project{
+    projectName: string;
     HTML_id: string;
     heading: string;
     year: string;
@@ -12,6 +13,7 @@ interface Project{
 
 const projects: Project[] = [
     {
+        projectName: "project-4",
         HTML_id: "project-4",
         heading: "testing testing testing testing testing testing testing testing testing testing testing testing",
         year: "2021",
@@ -21,6 +23,7 @@ const projects: Project[] = [
         stringArray: ["Nextjs","Tailwind",""],
     },
     {
+        projectName: "project-3",
         HTML_id: "project-3",
         heading: "App with Next.js & Tailwind CSS",
         year: "2021",
@@ -34,6 +37,7 @@ const projects: Project[] = [
         logoArray: [],
     },
     {
+        projectName: "project-2",
         HTML_id: "project-2",
         heading: "Pizzeria Reservation with Django, Graphene & React",
         year: "2021",
@@ -43,6 +47,7 @@ const projects: Project[] = [
         stringArray: ["Django", "Graphene", "GraphQL"],
     },
     {
+        projectName: "project-1",
         HTML_id: "project-1",
         heading: "Simulated Online Store with React, Bootstrap & Django",
         year: "2021",
@@ -53,6 +58,7 @@ const projects: Project[] = [
 
     },
     {
+        projectName: "project-0",
         HTML_id: "project-0",
         heading: "Website with React & Sass",
         year: "2021",
@@ -68,3 +74,4 @@ const projects: Project[] = [
 ];
 
 export default projects;
+export type { Project };

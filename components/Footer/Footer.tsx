@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowUDownLeft, Info, ListBullets } from "phosphor-react";
 
 interface FooterProps{
     readonly displayReturn?: boolean;
@@ -10,7 +11,7 @@ const Footer = ({displayReturn = false, displayTableOfContent = true, displayAbo
 
     function displayTableOfContentButton(): JSX.Element | undefined {
         if (displayTableOfContent){
-            return <button>open tableOfContent</button>;
+            return <ListBullets size="48"/>;
         } else {
             return;
         }
@@ -18,7 +19,7 @@ const Footer = ({displayReturn = false, displayTableOfContent = true, displayAbo
 
     function displayAboutButton(): JSX.Element | undefined {
         if (displayAbout){
-            return <button>open about</button>;
+            return <Info size="48" onClick={() => console.log("open about")}/>;
         } else {
             return;
         }
@@ -26,7 +27,7 @@ const Footer = ({displayReturn = false, displayTableOfContent = true, displayAbo
 
     function displayReturnButton(): JSX.Element | undefined {
         if (displayReturn){
-            return <Link href="/"><a>return to frontpage</a></Link>;
+            return <Link href="/"><a><ArrowUDownLeft size="48" /></a></Link>;
         } else {
             return;
         }
@@ -35,10 +36,15 @@ const Footer = ({displayReturn = false, displayTableOfContent = true, displayAbo
     return (
         <div id="footer" className={`h-16 w-screen flex-none sticky bottom-0 border-t-2 border-black
             shadow_around z-50 dark:bg-black dark:text-white dark:border-white flex flex-row justify-around`}>
-            <span>this is footer</span>
-            {displayTableOfContentButton()}
-            {displayAboutButton()}
-            {displayReturnButton()}
+            <div>
+                {displayTableOfContentButton()}
+            </div>
+            <div>
+                {displayAboutButton()}
+            </div>
+            <div>
+                {displayReturnButton()}
+            </div>
         </div>
     );
 }
