@@ -1,7 +1,7 @@
 import Project from "~/components/Project/Project";
 import Dashline from "~/components/Project/Dashline";
 
-import projects from "~/public/data/projects";
+import projects from "~/public/staticData/projects";
 
 const Projects = () => {
     return (

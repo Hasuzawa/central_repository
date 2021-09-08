@@ -14,7 +14,7 @@ import Introduction from '~/components/Introduction/Introduction';
 import Footer from "~/components/Footer/Footer";
 
 //import { DarkModeContext } from "~/pages/_app";
-import DarkModeContext from '~/components/context/DarkModeContext';
+import DarkModeContext from '~/components/contexts/DarkModeContext';
 
 
 //in next js each page is separate, so I need to put global variables in localStorage to be accessible to every page

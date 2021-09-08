@@ -1,6 +1,5 @@
 import { useContext, Dispatch, SetStateAction} from "react";
-import DarkModeContext from "../context/DarkModeContext";
-import useDarkMode from "~/components/hooks/useDarkMode";
+import DarkModeContext from "~/components/contexts/DarkModeContext";
 
 import Link from "next/link";
 
@@ -15,10 +14,15 @@ const Header = (): JSX.Element => {
     const setDarkMode = darkModeContext.setDarkMode;
 
     return (
-        <div id="header" className="h-16 w-screen flex-none sticky top-0 flex flex-row border-b-2 border-black shadow_around z-50">
+        <div id="header" className="h-16 w-screen flex-none sticky top-0 flex flex-row border-b-2 border-black shadow_around z-50 justify-evenly">
             <span>logo</span>
             <span>day/night button</span>
-            <button onClick={ () => setDarkMode(!inDarkMode)}>toggle dark mode</button>
+            <button
+                onClick={ () => setDarkMode(!inDarkMode)}
+                className=""
+            >
+                toggle dark mode
+            </button>
             <p className="dark:text-green-500">current dark mode value is {inDarkMode.toString()}</p>
             <Link href="/projects/project0"><a><span>to next page</span></a></Link>
         </div>
