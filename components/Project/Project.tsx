@@ -17,6 +17,7 @@ const Project = ({projectName, heading, status, short_description, stringArray, 
     return (
         <div
             onClick={ () => router.push(baseURL + projectName)}
+            title={baseURL + projectName}
             className="flex-none w-9/10 h-44 border-2 border-black rounded-2xl
                 overflow-x-hidden overflow-y-auto first:mt-4 last:mb-4 hover:ring-4 ring-blue-500 cursor-pointer"
             id={HTML_id?.toString()}

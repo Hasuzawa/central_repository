@@ -1,0 +1,19 @@
+/* for dash line (which is actually border) on both sides of text */
+.dashline{
+    display: flex;
+    flex-direction: row;
+}
+.dashline:before,
+.dashline:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid black;
+    margin: auto;
+}
+.dashline:before {
+    margin-right: 10px;
+}
+
+.dashline:after {
+    margin-left: 10px;
+}
