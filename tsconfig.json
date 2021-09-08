@@ -19,6 +19,7 @@
       "~/styles/*": ["styles/*"],
       "~/public/*": ["public/*"],
       "~/pages/*": ["pages/*"],
+      "~/darkModeCSS/*": ["darkModeCSS/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.js"],

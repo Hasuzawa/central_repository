@@ -1,7 +1,9 @@
 import Status from "~/components/Project/Status";
 import { StringToTags } from "~/components/Tag";
+import { useRouter, NextRouter } from "next/router";
 
 type ProjectProps = {
+    readonly projectName: string;
     readonly heading: string;
     readonly status: "completed" | "in progress" | "on hiatus" | "in design";
     readonly short_description: string;
@@ -9,10 +11,13 @@ type ProjectProps = {
     readonly HTML_id?: string;
 }
 
-const Project = ({heading, status, short_description, stringArray, HTML_id}: ProjectProps): JSX.Element => {
+const Project = ({projectName, heading, status, short_description, stringArray, HTML_id}: ProjectProps): JSX.Element => {
+    const router: NextRouter = useRouter();
+    const baseURL = "/projects/";
     return (
         <div
-            onClick={ () => 3}
+            onClick={ () => router.push(baseURL + projectName)}
+            title={baseURL + projectName}
             className="flex-none w-9/10 h-44 border-2 border-black rounded-2xl
                 overflow-x-hidden overflow-y-auto first:mt-4 last:mb-4 hover:ring-4 ring-blue-500 cursor-pointer"
             id={HTML_id?.toString()}

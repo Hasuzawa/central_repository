@@ -13,6 +13,7 @@ const Projects = () => {
             <Dashline str="2021" />
             {projects.map((project, idx) => (<Project
                 key={idx}
+                projectName={project.projectName}
                 HTML_id={project.HTML_id}
                 heading={project.heading}
                 status={project.status}

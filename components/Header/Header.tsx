@@ -1,30 +1,28 @@
-import { useContext, Dispatch, SetStateAction} from "react";
-import DarkModeContext from "~/components/contexts/DarkModeContext";
+import { useContext } from "react";
+import DarkModeContext from "../contexts/DarkModeContext";
 
-import Link from "next/link";
 
-// type headerProps = {
-//     inDarkMode: boolean;
-//     setDarkMode: Dispatch<SetStateAction<boolean>>;
-// };
+import styles from "~/styles/moduleCSS/button.module.css";
 
 const Header = (): JSX.Element => {
     const darkModeContext = useContext(DarkModeContext);
     const inDarkMode = darkModeContext.inDarkMode;
     const setDarkMode = darkModeContext.setDarkMode;
 
+    const btnClassName: string = inDarkMode ? styles.moonBtn : styles.sunBtn;
+    //(inDarkMode ? styles.moon-btn : "sun-btn")
+
     return (
-        <div id="header" className="h-16 w-screen flex-none sticky top-0 flex flex-row border-b-2 border-black shadow_around z-50 justify-evenly">
+        <div id="header" className="h-16 w-screen flex-none sticky top-0 flex flex-row border-b-2 border-black shadow_around z-50 dark:bg-black dark:text-white dark:border-white">
             <span>logo</span>
             <span>day/night button</span>
             <button
                 onClick={ () => setDarkMode(!inDarkMode)}
-                className=""
+                className={[styles.darkModeBtn, btnClassName].join(" ")}
             >
-                toggle dark mode
+                this is day night button
             </button>
             <p className="dark:text-green-500">current dark mode value is {inDarkMode.toString()}</p>
-            <Link href="/projects/project0"><a><span>to next page</span></a></Link>
         </div>
     );
 }

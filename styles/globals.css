@@ -10,59 +10,13 @@ html{
     scroll-behavior: smooth;
 }
 
-.custom_scrollbar::-webkit-scrollbar{
-
-}
-.custom_scrollbar::-webkit-scrollbar-button{
-
-}
-.custom_scrollbar::-webkit-scrollbar-corner{
-
-}
-.custom_scrollbar::-webkit-scrollbar-thumb{
-
-}
-.custom_scrollbar::-webkit-scrollbar-track{
-
-}
-.custom_scrollbar::-webkit-scrollbar-track-piece{
-    
-}
-.mostly-customized-scrollbar::-webkit-scrollbar {
-    width: 5px;
-    height: 8px;
-    background-color: #aaa; /* or add it to the track */
-}
-
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-    background: #000;
-}
-
 .shadow_around{
     box-shadow: 0px 0px 16px black;
 }
 
-/* for dash line (that is border) surrounding text*/
-.dashline{
-    display: flex;
-    flex-direction: row;
-}
-.dashline:before,
-.dashline:after{
-    content: "";
-    flex: 1 1;
-    border-bottom: 1px solid black;
-    margin: auto;
-}
-.dashline:before {
-    margin-right: 10px;
-}
-
-.dashline:after {
-    margin-left: 10px;
-}
 
 /* both Header and Footer are h-16(4em)*/
 .content-height{
     height: calc(100vh - 8em);
 }
+
