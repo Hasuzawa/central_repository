@@ -9,7 +9,7 @@ This project features:
 - Next.js, Tailwind CSS.
 - dynamic routing, static generation. Any data that is static can and should be fetched and done at build time.
 - automatically generated Table of Content. 
-- dark mode.
+- dark mode. Less fatigue, heat and energy for the same experience.
 - localStorage. Likely an overkill for what can be done in one click.
 
 ## Technical Commentary

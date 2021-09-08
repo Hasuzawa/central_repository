@@ -4,6 +4,8 @@ import Link from "next/link";
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import { useContext } from "react";
 
+import { StringToLogos } from "~/components/Logo";
+
 
 import projects, { Project } from "~/public/staticData/projects";
 import Header from "~/components/Header/Header";
@@ -42,11 +44,15 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
                     <h1>{project.heading}</h1>
                     <span>{project.status}</span>
                 </div>
-                {/* StringToLogo */}
-                
+                <div className="flex flex-row items-center">
+                    <StringToLogos stringArray={project.logoArray} />
+                </div>
                 
 
                 {/* <span>year is {project.year}</span> */}
+                <p>
+                    {project.long_description}
+                </p>
 
 
             </main>
