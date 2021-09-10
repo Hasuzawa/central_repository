@@ -1,21 +1,25 @@
 import Project from "~/components/Project/Project";
 import Dashline from "~/components/Dashline";
+import Division from "~/components/Project/Division";
 
 import projects from "~/public/staticData/projects";
 
 const Projects = () => {
-    return (
-        //justify will cause scroll to become invalid, because it is as if all items are wrapped in a position: relative box. Overflow
-        //won't trigger scrolls and overflowed content is not visible within parent.
 
-        //content-height is calculated ad-hoc solution. I spent too much time on this, I should move on and design other parts first.
-        <div id="projects" className="content-height mx-auto bg-yellow-200 flex flex-col items-center gap-y-4 overflow-x-hidden overflow-y-auto scroll-smooth">
-            <div className="w-9/10 h-auto first:mt-4 last:mb-4">
-                <Dashline>
-                    <span>2021</span>
-                </Dashline>
-            </div>
-            {projects.map((project, idx) => (<Project
+    let result: JSX.Element[] = [];
+    let years: string[] = [];
+    let idx: number = 0;
+
+    for (let i = 0; i < projects.length; i++){
+        let project = projects[i];
+        let year = project.year;
+        if (!years.includes(year)){
+            years.push(year);
+            result.push(<Division key={idx} str={year} />);
+            idx++;
+        }
+        result.push(
+            <Project
                 key={idx}
                 projectName={project.projectName}
                 HTML_id={project.HTML_id}
@@ -23,7 +27,18 @@ const Projects = () => {
                 status={project.status}
                 short_description={project.short_description}
                 stringArray={project.stringArray}
-            />))}
+            />);
+        idx++;
+    }
+
+
+    return (
+        //justify will cause scroll to become invalid, because it is as if all items are wrapped in a position: relative box. Overflow
+        //won't trigger scrolls and overflowed content is not visible within parent.
+
+        //content-height is calculated ad-hoc solution. I spent too much time on this, I should move on and design other parts first.
+        <div id="projects" className="content-height mx-auto bg-yellow-200 flex flex-col items-center gap-y-4 overflow-x-hidden overflow-y-auto scroll-smooth">
+            {result}
         </div>
     );
 }

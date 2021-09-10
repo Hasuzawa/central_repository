@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           <Introduction />
         </div>
       </main>
-      <Footer />
+      <Footer displayReturn={false}/>
     </div>
   )
 }

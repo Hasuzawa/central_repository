@@ -17,12 +17,17 @@ const projects: Project[] = [
     {
         projectName: "project-4",
         HTML_id: "project-4",
-        heading: "testing testing testing testing testing testing testing testing testing testing testing testing",
+        heading: "a webpage for viewing and sorting anime",
         year: "2021",
 
-        status: "in progress",
-        short_description: "",
-        stringArray: ["Nextjs","Tailwind",""],
+        status: "in design",
+        short_description: "my first landmark project where I start from UI design, frontend to CICD, analytics.",
+        stringArray: ["Nextjs","Tailwind"],
+
+        logoArray: [],
+        gitHubLink: "",
+        long_description: `This will be my first complete project where I design the UI, write the frontend, do testing, configure domain name, deploy,
+            add analytics. `,
     },
     {
         projectName: "project-3",

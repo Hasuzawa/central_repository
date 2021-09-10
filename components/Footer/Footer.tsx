@@ -9,7 +9,7 @@ interface FooterProps{
     readonly displayAbout?: boolean;
 }
 //we don't need to pass dark mode status in component, the page in HTML tree has already passed that information
-const Footer = ({displayReturn = false, displayTableOfContent = true, displayAbout = true}: FooterProps): JSX.Element => {
+const Footer = ({displayReturn = true, displayTableOfContent = true, displayAbout = true}: FooterProps): JSX.Element => {
 
     function displayTableOfContentButton(): JSX.Element | undefined {
         if (displayTableOfContent){
@@ -38,10 +38,10 @@ const Footer = ({displayReturn = false, displayTableOfContent = true, displayAbo
     return (
         <div id="footer" className={`h-16 w-screen flex-none sticky bottom-0 border-t-2 border-black
             shadow_around z-50 dark:bg-black dark:text-white dark:border-white flex flex-row justify-around`}>
-            <div>
+            <div className="md:hidden">
                 {displayTableOfContentButton()}
             </div>
-            <div>
+            <div className="lg:hidden">
                 {displayAboutButton()}
             </div>
             <div>

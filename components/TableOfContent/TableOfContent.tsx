@@ -12,7 +12,7 @@ const TableOfContent = () => {
         let year = project.year;
         if (!years.includes(year)){
             years.push(year);
-            result.push(<Dashline><span>{year}</span></Dashline>);
+            result.push(<Dashline key={idx}><span>{year}</span></Dashline>);
             idx++;
         }
         result.push(<Entry key={idx} HTML_id={project.HTML_id} heading={project.heading}/>);
