@@ -1,5 +1,5 @@
 import Project from "~/components/Project/Project";
-import Dashline from "~/components/Project/Dashline";
+import Dashline from "~/components/Dashline";
 
 import projects from "~/public/staticData/projects";
 
@@ -10,7 +10,11 @@ const Projects = () => {
 
         //content-height is calculated ad-hoc solution. I spent too much time on this, I should move on and design other parts first.
         <div id="projects" className="content-height mx-auto bg-yellow-200 flex flex-col items-center gap-y-4 overflow-x-hidden overflow-y-auto scroll-smooth">
-            <Dashline str="2021" />
+            <div className="w-9/10 h-auto first:mt-4 last:mb-4">
+                <Dashline>
+                    <span>2021</span>
+                </Dashline>
+            </div>
             {projects.map((project, idx) => (<Project
                 key={idx}
                 projectName={project.projectName}

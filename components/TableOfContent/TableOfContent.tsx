@@ -1,5 +1,5 @@
 import projects from "~/public/staticData/projects";
-import Dashline from "~/components/TableOfContent/Dashline";
+import Dashline from "~/components/Dashline";
 import Entry from "~/components/TableOfContent/Entry";
 
 const TableOfContent = () => {
@@ -12,7 +12,7 @@ const TableOfContent = () => {
         let year = project.year;
         if (!years.includes(year)){
             years.push(year);
-            result.push(<Dashline key={idx} year={year} />);
+            result.push(<Dashline><span>{year}</span></Dashline>);
             idx++;
         }
         result.push(<Entry key={idx} HTML_id={project.HTML_id} heading={project.heading}/>);

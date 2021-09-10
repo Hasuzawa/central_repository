@@ -1,4 +1,6 @@
 
+import Dashline from "~/components/Dashline";
+
 const Introduction = () => {
     return (
         <div className="flex flex-col p-4 overflow-x-hidden overflow-y-auto">
@@ -16,6 +18,9 @@ const Introduction = () => {
                 timeframe. It is unlikely that anything I complete now is relevant for more than 3 years.
                 I ought to move forward first before designing my magnum opus.
             </p>
+            <Dashline>
+                <span>hello</span>
+            </Dashline>
         </div>
     );
 }

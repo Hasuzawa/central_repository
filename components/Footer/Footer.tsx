@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArrowUDownLeft, Info, ListBullets } from "phosphor-react";
+import TableOfContent from "components/TableOfContent/TableOfContent";
+import CenterOverlay from "~/components/portals/CenterOverlay";
 
 interface FooterProps{
     readonly displayReturn?: boolean;
@@ -44,6 +46,10 @@ const Footer = ({displayReturn = false, displayTableOfContent = true, displayAbo
             </div>
             <div>
                 {displayReturnButton()}
+
+                <CenterOverlay selector="portal-root">
+                    <TableOfContent />
+                </CenterOverlay>
             </div>
         </div>
     );

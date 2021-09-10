@@ -20,6 +20,7 @@ module.exports = {
     extend: {
       margin: ["responsive", "hover", "first", "last"],
       ringWidth: ["hover"],
+      borderColor: ["dark"],
     },
   },
   plugins: [],

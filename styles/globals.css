@@ -20,3 +20,10 @@ html{
     height: calc(100vh - 8em);
 }
 
+@layer utilities {
+    @variant dark{
+        .dashline-white:after{
+            border-bottom: 1px solid white;
+        }
+    }
+}

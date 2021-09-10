@@ -30,7 +30,7 @@ This project features:
         There seems to be a lot of directories for quite a simple app, but I want to keep this scalable.
         I know from first-hand experience that as an app grows, it becomes more and more difficult to move and modify files without breaking things.
     </li>
-
+    
     
 </ul>
 
