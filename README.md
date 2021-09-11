@@ -13,10 +13,10 @@ This project features:
 - localStorage. Likely an overkill for what can be done in one click.
 - Figma prototype. First time using Figma. It has list, scrolling, page transition and interactive button.
 
-## Wireframe
+## Wireframe/Prototype
 
-Figma
-
+[Figma prototype](https://www.figma.com/proto/AIaNib5prSUpq8ATRSzYtx/repository-web-app?node-id=1%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1)<br />
+Not very satisfied but I improved my practices a lot during trial and error so the next one is going to be much better.
 
 ## Technical Commentary
 <details close>
