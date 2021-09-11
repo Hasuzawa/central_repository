@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUDownLeft, Info, ListBullets } from "phosphor-react";
+import { ArrowUDownLeft, Info, ListBullets, X } from "phosphor-react";
 import TableOfContent from "components/TableOfContent/TableOfContent";
 import CenterOverlay from "~/components/portals/CenterOverlay";
 
@@ -47,8 +47,11 @@ const Footer = ({displayReturn = true, displayTableOfContent = true, displayAbou
             <div>
                 {displayReturnButton()}
 
-                <CenterOverlay selector="portal-root">
-                    <TableOfContent />
+                <CenterOverlay selector="#portal-root">
+                    <div className="bg-white w-full h-full overflow-y-auto">
+                        <X size="32" className="absolute top-0 right-0" />
+                        <TableOfContent />
+                    </div>
                 </CenterOverlay>
             </div>
         </div>

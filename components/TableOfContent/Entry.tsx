@@ -1,3 +1,5 @@
+import { PaintBrush, Play, Pause, Check } from "phosphor-react";
+
 interface EntryProps{
     HTML_id: string;
     heading: string;

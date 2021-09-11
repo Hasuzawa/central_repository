@@ -21,7 +21,8 @@ class MyDocument extends Document{
             </Head>
                 <body>
                     <Main />
-                    <div id="portal-root" />
+                    {/* <div id="portal-root" className="absolute border-2 border-black
+                        m-auto"/> */}
                     <NextScript />
                 </body>
             </Html>

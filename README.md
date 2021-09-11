@@ -8,9 +8,15 @@ to their page or repository.
 This project features:
 - Next.js, Tailwind CSS.
 - dynamic routing, static generation. Any data that is static can and should be fetched and done at build time.
-- automatically generated Table of Content. 
-- dark mode. Less fatigue, heat and energy for the same experience.
+- automatically generated Table of Content and project feeds.
+- dark mode. Less eye fatigue, heat and energy for the same experience.
 - localStorage. Likely an overkill for what can be done in one click.
+- Figma prototype. First time using Figma. It has list, scrolling, page transition and interactive button.
+
+## Wireframe
+
+Figma
+
 
 ## Technical Commentary
 <details close>
