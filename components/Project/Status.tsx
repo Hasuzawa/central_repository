@@ -1,6 +1,9 @@
 import React from "react";
+
+
+type status = "completed" | "in progress" | "on hiatus" | "in design";
 type statusProps = {
-    readonly status: "completed" | "in progress" | "on hiatus" | "in design";
+    readonly status: status;
     readonly className?: string;
 }
 const Status = ({status, className}: statusProps): JSX.Element => {
@@ -19,4 +22,5 @@ const Status = ({status, className}: statusProps): JSX.Element => {
     );
 }
 
+export type { status };
 export default Status

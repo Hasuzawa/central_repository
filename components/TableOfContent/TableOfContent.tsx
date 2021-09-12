@@ -15,7 +15,7 @@ const TableOfContent = () => {
             result.push(<Dashline key={idx}><span>{year}</span></Dashline>);
             idx++;
         }
-        result.push(<Entry key={idx} HTML_id={project.HTML_id} heading={project.heading}/>);
+        result.push(<Entry key={idx} project={project}/>);
         idx++;
     }
 

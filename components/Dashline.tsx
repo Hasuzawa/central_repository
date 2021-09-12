@@ -1,5 +1,5 @@
 interface DashlineProps{
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 /**
@@ -11,13 +11,20 @@ interface DashlineProps{
  * 
  */
 const Dashline = ({children}: DashlineProps) => {
-    return (
-        <div className="flex flex-row">
-            <span className={"flex-1 border-t border-black dark:border-white self-center mr-3"}></span>
-            <div>{children}</div>
-            <span className={"flex-1 border-t border-black dark:border-white self-center ml-3"}></span>
-        </div>
-    );
+    
+    if (!children){
+        return (
+            <div className="border-t border-black dark:border-white" />
+        );
+    } else {
+        return (
+            <div className="flex flex-row">
+                <span className={"flex-1 border-t border-black dark:border-white self-center mr-3"}></span>
+                <div>{children}</div>
+                <span className={"flex-1 border-t border-black dark:border-white self-center ml-3"}></span>
+            </div>
+        );
+    }
 }
 
 
