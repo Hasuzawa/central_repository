@@ -2,10 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from "next/link";
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
-import { useContext } from "react";
 
 import { StringToLogos } from "~/components/Logo";
+import Status from '~/components/Project/Status';
 
+import { Link as LinkIcon } from 'phosphor-react';
 
 import projects, { Project } from "~/public/staticData/projects";
 import Header from "~/components/Header/Header";
@@ -30,6 +31,14 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
     console.log("props is this:", props)
     const project = props.data.project;
 
+    function getLink(link: undefined | string){
+        if (link === undefined || link === ""){
+            return null;
+        } else {
+            return <Link href={link}><a className="flex"><LinkIcon size={24} />redirect</a></Link>;
+        }
+    }
+
     return (
         <div className={"flex flex-col w-screen h-screen" + getDarkModeClassName("page")}>
             <Head>
@@ -39,24 +48,31 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
                 <link rel="icon" href="/favicon.ico" /> */}
             </Head>
             <Header />
-            <main className="flex-1 max-w-screen-lg self-center flex flex-col min-w-0 min-h-0 overflow-x-hidden overflow-y-scroll">
-                <div>
-                    <h1>{project.heading}</h1>
-                    <span>{project.status}</span>
-                </div>
-                <div className="flex flex-row items-center">
-                    <StringToLogos stringArray={project.logoArray} />
-                </div>
-                
+            <div className={`flex-1 w-screen content-height flex justify-center` + getDarkModeClassName("main")} >
+                <main className={`h-full max-w-screen-lg self-center flex flex-col gap-y-2 min-w-0 min-h-0
+                    overflow-x-hidden overflow-y-scroll p-4`}>
+                    <div className="flex justify-between">
+                        <h1>{project.heading}</h1>
+                        <Status status={project.status} />
+                    </div>
+                    {/* note that black logos will be invisible in dark mode */}
+                    <div className="flex flex-row items-center">
+                        <StringToLogos stringArray={project.logoArray} />
+                    </div>
+                    <div className="flex justify-between">
+                        <span>year: {project.year}</span>
+                        {getLink(project.link)}
+                    </div>
+                    
 
-                {/* <span>year is {project.year}</span> */}
-                <p>
-                    {project.long_description}
-                </p>
+                    {/* <span>year is {project.year}</span> */}
+                    <p>
+                        {project.long_description}
+                    </p>
 
-
-            </main>
-            <Footer displayReturn={true}/>
+                </main>
+            </div>
+            <Footer displayTableOfContent={false} displayAbout={false} displayReturn={true}/>
         </div>
     );
 }

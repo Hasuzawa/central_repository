@@ -9,25 +9,40 @@ interface Project{
 
    
     logoArray?: string[];
-    gitHubLink?: string;
+    link?: string;
     long_description?: string;
 }
 
 const projects: Project[] = [
     {
-        projectName: "project-4",
-        HTML_id: "project-4",
-        heading: "a webpage for viewing and sorting anime",
+        projectName: "project-5",
+        HTML_id: "project-5",
+        heading: "3d animation using Typescript",
         year: "2021",
 
         status: "in design",
-        short_description: "my first landmark project where I start from UI design, frontend to CICD, analytics.",
+        short_description: "A simple 3D project.",
+        stringArray: ["react-three-fiber", "react-three-cannon", "three.js"],
+
+        logoArray: [],
+        link: "",
+        long_description: `I found many libraries that greatly simplify the process of rendering 3D objects
+            in JS. I put together what I know as a simple project.`,
+    },
+    {
+        projectName: "project-4",
+        HTML_id: "project-4",
+        heading: "Webpage using GraphQL to fetch data",
+        year: "2021",
+
+        status: "in design",
+        short_description: "My first landmark project where I start from UI design, frontend to CICD, analytics.",
         stringArray: ["Nextjs","Tailwind"],
 
         logoArray: [],
-        gitHubLink: "",
+        link: "",
         long_description: `This will be my first complete project where I design the UI, write the frontend, do testing, configure domain name, deploy,
-            add analytics. `,
+            add analytics.`,
     },
     {
         projectName: "project-3",
@@ -36,11 +51,11 @@ const projects: Project[] = [
         year: "2021",
 
         status: "in progress",
-        short_description: "",
+        short_description: 'This website itself. Powered by Next.js and Tailwind CSS. Has night mode and dynamically generated Table and Content.',
         stringArray: ["Nextjs", "Tailwind", "React"],
         
         logoArray: ["Nextjs", "Tailwind", "React", "Typescript"],
-        gitHubLink: "https://github.com/Hasuzawa/central_repository",
+        link: "https://github.com/Hasuzawa/central_repository",
         long_description: `I need a centralised place to relay to my other projects. It is going to be very
             small-scale so it is the best opportunity to try out new frameworks, namely Next.js and Tailwind CSS.
             I must say I am surprised at their synergy. In a few places I have done the traditional way of
@@ -60,13 +75,14 @@ const projects: Project[] = [
         year: "2021",
 
         status: "on hiatus",
-        short_description: "",
+        short_description: `A practice on database modelling and django usage. Also uses extensive
+            Graphene GraphQL operations`,
         stringArray: ["Django", "Graphene", "GraphQL"],
 
         logoArray: ["Django", "Graphene", "GraphQL"],
-        gitHubLink: "",
+        link: "https://github.com/Hasuzawa/Pizzeria",
         long_description: `The database model from the last project is too simple. This project aims to address
-            that. `,
+            that. I used UML to model the database.`,
     },
     {
         projectName: "project-1",
@@ -75,11 +91,11 @@ const projects: Project[] = [
         year: "2021",
 
         status: "on hiatus",
-        short_description: "a full stack project with React as frontend and Django as backend.",
+        short_description: "A full stack project with React as frontend and Django as backend.",
         stringArray: ["React", "Django", "Bootstrap"],
 
         logoArray: ["React", "Django", "Bootstrap", "Python", "GraphQL", "Apollo", "Graphene"],
-        gitHubLink: "",
+        link: "https://github.com/Hasuzawa/virtual_shop_frontend",
         long_description: `I know I need to know how to interact with API and that was the premise of
             this project. There is REST framework but GraphQL caught my attention. Initially I thought
             it would be similar to SQL, which is not quite the reality. But they do have one thing in
@@ -92,11 +108,11 @@ const projects: Project[] = [
         year: "2021",
 
         status: "completed",
-        short_description: "my first project using React, HTML and Sass to build to my homepage.",
+        short_description: "My first project using React, HTML and Sass to build to my homepage.",
         stringArray: ["React","Sass","HTML"],
         
         logoArray: ["React", "Sass", "HTML", "CSS", "Javascript"],
-        gitHubLink: "https://github.com/Hasuzawa/homepage",
+        link: "https://github.com/Hasuzawa/homepage",
         long_description: `This is my first ever project. Honestly it is very mundane. But I put together
             everything I knew then, starting from webpack, configuration, constantly refering to React docs,
             check stackoverflow posts. Considering sometimes even an 1-character mistake and the whole app

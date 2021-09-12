@@ -16,7 +16,7 @@ interface FooterProps{
 }
 //we don't need to pass dark mode status in component, the page in HTML tree has already passed that information
 const Footer = ({displayReturn = true, displayTableOfContent = true, displayAbout = true}: FooterProps): JSX.Element => {
-    const [showOverlay, setShowOverlay] = useState<boolean>(displayTableOfContent);
+    const [showOverlay, setShowOverlay] = useState<boolean>(false);
     const [contentType, setContentType] = useState<overlayContent>("table");
 
     function displayTableOfContentButton(): JSX.Element | undefined {
@@ -90,10 +90,11 @@ interface OverlayProps{
 const Overlay = ({contentType, showOverlay, setShowOverlay}: OverlayProps) => {
         return (
             <CenterOverlay selector="#main-middle">
-                <div className="absolute top-1/2 left-0 bg-white w-full h-1/2 overflow-y-auto border-2 border-black dark:border-white dark:bg-black">
+                <div className={`absolute top-1/2 left-0 bg-white w-full h-1/2 overflow-y-auto px-4
+                    border-2 border-black dark:border-white dark:bg-black`}>
                     <X
                         size="32"
-                        className="absolute top-0 right-0 cursor-pointer"
+                        className="absolute top-2 right-2 cursor-pointer"
                         onClick={() => setShowOverlay(!showOverlay)}
                     />
                     {contentType === "table" ? <TableOfContent /> : <Introduction />}

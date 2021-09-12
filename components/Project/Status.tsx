@@ -6,16 +6,16 @@ type statusProps = {
 const Status = ({status, className}: statusProps): JSX.Element => {
 
     let commonProps = className ? className : "";
-    let color: string = "";
+    let bgColor: string = "";
     switch (status){
-        case "completed": color = "text-green-500"; break;
-        case "in progress": color = "text-yellow-500"; break;
-        case "on hiatus": color = "text-red-500"; break;
-        case "in design": color = "text-blue-500"; break;
+        case "completed": bgColor = "bg-green-500"; break;
+        case "in progress": bgColor = "bg-yellow-500"; break;
+        case "on hiatus": bgColor = "bg-red-500"; break;
+        case "in design": bgColor = "bg-purple-500"; break;
     }
 
     return (
-        <span className={`${color} ${commonProps}`}>{status}</span>
+        <span className={"text-white rounded-full px-2 " + `${bgColor} ${commonProps}`}>{status}</span>
     );
 }
 

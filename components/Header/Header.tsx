@@ -8,7 +8,7 @@ const Header = (): JSX.Element => {
 
     return (
         <div id="header" className={`h-16 w-screen flex-none sticky top-0 flex flex-row justify-between items-center
-            border-b-2 border-black shadow_around z-50 dark:bg-black dark:text-white dark:border-white`}>
+            border-b-2 border-black shadow_around z-50 px-4 dark:bg-black dark:text-white dark:border-white`}>
             <Logo />
             <span>Hasuzawa's projects</span>
             <DayNightSwitch />
