@@ -24,13 +24,13 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main id="main" className=" flex flex-row content-height dark:bg-black dark:text-white">
-        <div id="main-left" className="hidden md:block flex-1 height-full border-r-2 border-black min-w-0 min-h-0">
+        <div id="main-left" className="hidden md:block flex-1 height-full border-r-2 border-black dark:border-white min-w-0 min-h-0">
           <TableOfContent />
         </div>
-        <div id="main-middle" className="flex-none w-screen md:w-3/5 lg:w-2/5 h-full">
+        <div id="main-middle" className="flex-none w-screen relative md:w-3/5 lg:w-2/5 h-full">
           <Projects />
         </div>
-        <div id="main-right" className="hidden lg:block flex-1 border-l-2 border-black">
+        <div id="main-right" className="hidden lg:block flex-1 border-l-2 border-black dark:border-white">
           <Introduction />
         </div>
       </main>
