@@ -20,31 +20,42 @@ const Footer = ({displayReturn = true, displayTableOfContent = true, displayAbou
     const [contentType, setContentType] = useState<overlayContent>("table");
 
     function displayTableOfContentButton(): JSX.Element | undefined {
+
+        function handleTableBtnEvent(){
+            if (contentType === "table"){setShowOverlay(!showOverlay)}
+            else if (showOverlay === true){setContentType("table")}
+            else {setContentType("table"); setShowOverlay(true)}
+        }
+
         if (displayTableOfContent){
             return <ListBullets
                 size="48"
-                onClick={() => {
-                    if (contentType === "table"){setShowOverlay(!showOverlay)}
-                    else if (showOverlay === true){setContentType("table")}
-                    else {setContentType("table"); setShowOverlay(true)}
-                }}
+                onClick={handleTableBtnEvent}
                 className="cursor-pointer"
+                id="open-table-btn"
+                tabIndex={0}
+                onKeyPress={(e) => {e.key === "Enter" ? handleTableBtnEvent() : null}}
             />;
         } else {
             return;
         }
     }
 
+    function handleAboutBtnEvent(){
+        if (contentType === "about"){setShowOverlay(!showOverlay)}
+        else if (showOverlay === true){setContentType("about")}
+        else {setContentType("about"); setShowOverlay(true)}
+    }
+
     function displayAboutButton(): JSX.Element | undefined {
         if (displayAbout){
             return <Info
                 size="48"
-                onClick={() => {
-                    if (contentType === "about"){setShowOverlay(!showOverlay)}
-                    else if (showOverlay === true){setContentType("about")}
-                    else {setContentType("about"); setShowOverlay(true)}
-                }}
+                onClick={handleAboutBtnEvent}
                 className="cursor-pointer"
+                id="open-about-btn"
+                tabIndex={0}
+                onKeyPress={(e) => {e.key === "Enter" ? handleAboutBtnEvent() : null}}
             />;
         } else {
             return;
@@ -53,7 +64,7 @@ const Footer = ({displayReturn = true, displayTableOfContent = true, displayAbou
 
     function displayReturnButton(): JSX.Element | undefined {
         if (displayReturn){
-            return <Link href="/"><a><ArrowUDownLeft size="48" /></a></Link>;
+            return <Link href="/" ><a id="return-btn"><ArrowUDownLeft size="48" /></a></Link>;
         } else {
             return;
         }

@@ -28,8 +28,10 @@ const DayNightSwitch = (): JSX.Element => {
     const setDarkMode = darkModeContext.setDarkMode;
     if (setDarkMode === null){throw new Error();};
 
-    return inDarkMode ? <Moon size={48} onClick={() => setDarkMode(!inDarkMode)} className="cursor-pointer" />
-                      :< Sun size={48} onClick={() => setDarkMode(!inDarkMode)} className="cursor-pointer" />
+    return inDarkMode ? <Moon size={48} onClick={() => setDarkMode(!inDarkMode)} className="cursor-pointer"
+        id="moon-btn" tabIndex={0} onKeyPress={(e) => {e.key === "Enter" ? setDarkMode(!inDarkMode) : null}} />
+                      : <Sun size={48} onClick={() => setDarkMode(!inDarkMode)} className="cursor-pointer"
+        id="sun-btn" tabIndex={0} onKeyPress={(e) => {e.key === "Enter" ? setDarkMode(!inDarkMode) : null}}/>
 };
 
 

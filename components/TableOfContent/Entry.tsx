@@ -17,12 +17,13 @@ const Entry = ({project}: EntryProps) => {
     
     function getIcon(status: status){
         const size = 24;
+        const commonProps = {size: size, className: "flex-grow-0 flex-shrink-0"};
 
         switch (status){
-            case "in design": return <PaintBrush size={size} />
-            case "on hiatus": return <Pause size={size} />
-            case "in progress": return <Play size={size} />
-            case "completed": return <Check size={size} />
+            case "in design": return <PaintBrush {...commonProps} />
+            case "on hiatus": return <Pause {...commonProps} />
+            case "in progress": return <Play {...commonProps} />
+            case "completed": return <Check {...commonProps} />
         }
     }
 
@@ -30,9 +31,9 @@ const Entry = ({project}: EntryProps) => {
         <li
             onMouseOver={ () => scrollToById(HTML_id)}
             onClick={ () => scrollToById(HTML_id)}
-            className="cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 truncate flex justify-between"
+            className="cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 flex justify-between"
         >
-            {heading}
+            <span className="truncate">{heading}</span>
             {getIcon(project.status)}
         </li>
     );

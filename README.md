@@ -12,6 +12,8 @@ This project features:
 - dark mode. Less eye fatigue, heat and energy for the same experience.
 - localStorage. Likely an overkill for what can be done in one click.
 - Figma prototype. First time using Figma. It has list, scrolling, page transition and interactive button.
+- cypress testing. I have used Jest before but cypress is even more powerful.
+- high accessibility. The whole site can be navigated by [tab] and [enter/return] key alone.
 
 ## Wireframe/Prototype
 
@@ -36,8 +38,5 @@ Not very satisfied but I improved my practices a lot during trial and error so t
         There seems to be a lot of directories for quite a simple app, but I want to keep this scalable.
         I know from first-hand experience that as an app grows, it becomes more and more difficult to move and modify files without breaking things.
     </li>
-    
-    
 </ul>
-
 </details>

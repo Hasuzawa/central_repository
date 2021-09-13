@@ -13,14 +13,19 @@ type ProjectProps = {
 
 const Project = ({projectName, heading, status, short_description, stringArray, HTML_id}: ProjectProps): JSX.Element => {
     const router: NextRouter = useRouter();
-    const baseURL = "/projects/";
+    const baseUrl = "/projects/";
+
+    const redirect = () => router.push(baseUrl + projectName);
+
     return (
         <div
-            onClick={ () => router.push(baseURL + projectName)}
-            title={baseURL + projectName}
+            onClick={redirect}
+            title={baseUrl + projectName}
             className="flex-none w-9/10 h-44 border-2 border-black rounded-2xl
                 overflow-x-hidden overflow-y-auto first:mt-4 last:mb-4 hover:ring-4 ring-blue-500 cursor-pointer"
             id={HTML_id?.toString()}
+            tabIndex={0}
+            onKeyPress={(e) => {e.key === "Enter" ? redirect() : null}}
         >
             <div className="grid grid-cols-6 grid-rows-6 place-items-center p-2 min-h-0 min-w-0 w-full h-full">
                 {/* <div className="">
