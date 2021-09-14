@@ -6,7 +6,13 @@ jobs:
     # let's make sure our tests pass on Chrome browser
     name: E2E on Chrome
     steps:
-      - uses: actions/checkout@v2
-      - uses: cypress-io/github-action@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Start Next.js app
+        run: npm run dev
+      - name: Start cypress
+        uses: cypress-io/github-action@v2
         with:
           browser: chrome
+          wait-on: "http://localhost:3000"
+          working-directory: e2e
