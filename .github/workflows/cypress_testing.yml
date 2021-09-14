@@ -1,5 +1,7 @@
 name: E2E on Chrome
+
 on: [push]
+
 jobs:
   cypress-run:
     runs-on: ubuntu-20.04
@@ -8,15 +10,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm install
-      - name: Build app
-        run: npm run build
-      - name: Start app
-        run: npm start
+      # - name: Build app
+      #   run: npm run build
+      # - name: Start app
+      #   run: npm start
       - name: Start cypress
         uses: cypress-io/github-action@v2
         with:
+          build: npm run build
+          start: npm start
           browser: chrome
-          wait-on: "http://localhost:3000"
-          working-directory: e2e
+          # wait-on: "http://localhost:3000"
+          # working-directory: e2e
