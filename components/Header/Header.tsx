@@ -8,7 +8,7 @@ const Header = (): JSX.Element => {
 
 
     return (
-        <div id="header" className={`h-16 w-screen flex-none sticky top-0 flex flex-row justify-between items-center
+        <div id="header" className={`h-16 w-screen flex-none flex flex-row justify-between items-center
             border-b-2 border-black shadow_around z-50 px-4 dark:bg-black dark:text-white dark:border-white`}>
             <Logo />
             <span>Hasuzawa&apos;s projects</span>
@@ -20,7 +20,7 @@ const Header = (): JSX.Element => {
 const Logo = (): JSX.Element => {
     const darkModeContext = useContext(DarkModeContext);
     const inDarkMode = darkModeContext.inDarkMode;
-    const commonProps = {width: 48, height: 48, alt: "logo of the website"};
+    const commonProps = {width: 48, height: 48, alt: "logo of the website", priority: true};
 
     return inDarkMode ? <Image src={"/icons/websiteLogo_dark.svg"} {...commonProps} />
                       : <Image src={"/icons/websiteLogo_light.svg"} {...commonProps} />;

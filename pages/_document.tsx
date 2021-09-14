@@ -22,10 +22,10 @@ class MyDocument extends Document{
                 
                 <meta property="og:locale"      content="en_US" />
                 <meta property="og:type"        content="website" />
-                <meta property="og:url"         content="" />
+                <meta property="og:url"         content="https://central-repository.vercel.app/" />
                 <meta property="og:title"       content="Repository with Hasuzawa's Projects" />
                 <meta property="og:description" content="The website is a repository containing all projects by Hasuzawa Yuichi." />
-                <meta property="og:image"       content="" />
+                <meta property="og:image"       content="/metaImages/og:banner.png" />
 
                 <meta property="og:site_name"   content="Hasuzawa's repositories" />
 
@@ -34,10 +34,13 @@ class MyDocument extends Document{
                 <meta property="twitter:card"       content="summary" />
                 <meta property="twitter:title"      content="Repository with Hasuzawa's Projects"  />
                 <meta property="twitter:description"content="The website with all projects by Hasuzawa Yichi."  />
-                <meta property="twitter:url"        content=""  />
-                <meta property="twitter:image"      content=""  />
-                <meta property="twitter:image:alt"  content=""  />
+                <meta property="twitter:url"        content="https://central-repository.vercel.app/"  />
+                <meta property="twitter:image"      content="/metaImages/tw:card.png"  />
+                <meta property="twitter:image:alt"  content="the logo and table of content of the website"  />
                 {/* <meta property="twitter:site"       content=""  /> only needed if you want to mention an account on twitter */}
+
+
+                <link rel="icon" href="/favicon.ico" />
 
                 {/*  theme color  */}
 

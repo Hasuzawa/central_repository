@@ -1,14 +1,16 @@
-name: Deploy App
+# not needed for Vercel, Vercel automatically updates website on main branch
+#
+# name: Deploy App
 
-on:
-  worflow_run:
-    workflows: ["Integrated Test"]
-    types:
-      - completed
+# on:
+#   workflow_run:
+#     workflows: ["Integrated Test"]
+#     types:
+#       - completed
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      name: Deploy to Vercel
-      run: echo "this workflow is not yet complete"
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       name: Deploy to Vercel
+#       run: echo "this workflow is not yet complete"
