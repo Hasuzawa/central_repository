@@ -9,8 +9,6 @@ interface CenterOverlayProps{
 
 const CenterOverlay = ({ children, selector}: CenterOverlayProps): React.ReactPortal | null => {
     const [ isMounted, setIsMounted ] = useState<boolean>(false);
-    console.log(children);
-    console.log(selector);
 
     useEffect(() => {
         setIsMounted(true);

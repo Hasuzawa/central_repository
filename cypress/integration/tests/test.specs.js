@@ -2,8 +2,8 @@ import projects from "~/public/staticData/projects";
 
 
 const projectNumber = projects.length;
-const baseUrl = "http://localhost:3000";
-
+//const baseUrl = "http://localhost:3000";
+const baseUrl = "/" //set in cypress.json
 
 describe("check website", () => {
     beforeEach(() => {
@@ -38,7 +38,7 @@ describe("check website", () => {
 
     it("can go to each page and come back", () => {
         for (let project of projects){
-            cy.get(`#${project.projectName}`).click();
+            cy.get(`#${project.HTML_id}`).click();
             cy.url().should("include", `http://localhost:3000/projects/${project.projectName}`);
             cy.get("#return-btn").click();
             cy.url().should("include", baseUrl);
