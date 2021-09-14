@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Start cypress
+      - name: Start cypress on Chrome
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
@@ -25,13 +25,13 @@ jobs:
 
   test-firefox:
     runs-on: ${{ matrix.os }}
-      strategy:
-        matrix:
-          os: [windows-latest, macos-latest, ubuntu-latest]
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Start cypress
+      - name: Start cypress on Firefox
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
@@ -39,13 +39,13 @@ jobs:
           browser: firefox
   test-on-edge:
     runs-on: ${{ matrix.os }}
-      strategy:
-        matrix:
-          os: [windows-latest, macos-latest, ubuntu-latest]
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Start cypress
+      - name: Start cypress on Edge
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
