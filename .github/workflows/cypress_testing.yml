@@ -1,24 +1,53 @@
-name: E2E on Chrome
+name: Integrated Test
 
 on: [push]
 
+# [linux, mac, windows] x [chrome, firefox, edge]
+# naive way to do this, can use parallelisation in the future
+
 jobs:
-  cypress-run:
-    runs-on: ubuntu-20.04
-    # let's make sure our tests pass on Chrome browser
+
+  test-chrome:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
     name: E2E on Chrome
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      # - name: Build app
-      #   run: npm run build
-      # - name: Start app
-      #   run: npm start
       - name: Start cypress
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
           start: npm start
           browser: chrome
-          # wait-on: "http://localhost:3000"
-          # working-directory: e2e
+
+  test-firefox:
+    runs-on: ${{ matrix.os }}
+      strategy:
+        matrix:
+          os: [windows-latest, macos-latest, ubuntu-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Start cypress
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
+          browser: firefox
+  test-on-edge:
+    runs-on: ${{ matrix.os }}
+      strategy:
+        matrix:
+          os: [windows-latest, macos-latest, ubuntu-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Start cypress
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run build
+          start: npm start
+          browser: edge
