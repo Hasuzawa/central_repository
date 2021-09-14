@@ -21,17 +21,14 @@ const Project = ({projectName, heading, status, short_description, stringArray, 
         <div
             onClick={redirect}
             title={baseUrl + projectName}
-            className="flex-none w-9/10 h-44 border-2 border-black rounded-2xl
+            className="flex-none w-9/10 h-44 border-2 border-black dark:border-white rounded-2xl
                 overflow-x-hidden overflow-y-auto first:mt-4 last:mb-4 hover:ring-4 ring-blue-500 cursor-pointer"
             id={HTML_id?.toString()}
             tabIndex={0}
             onKeyPress={(e) => {e.key === "Enter" ? redirect() : null}}
         >
             <div className="grid grid-cols-6 grid-rows-6 place-items-center p-2 min-h-0 min-w-0 w-full h-full">
-                {/* <div className="">
-                    <h1>{heading}</h1>
-                    <Status status={status} className={""}/>
-                </div> */}
+
                 <h1 className="row-start-1 row-span-2 col-start-1 col-span-4 text-center overflow-hidden overflow-ellipsis min-h-0 min-w-0 underline">{heading}</h1>
                 <Status status={status} className="row-start-1 row-span-2 col-start-5 col-span-2 place-self-center"/>
                 <p className="col-start-1 col-span-6 row-start-3 row-span-3 place-self-start overflow-hidden overflow-ellipsis">{short_description}</p>

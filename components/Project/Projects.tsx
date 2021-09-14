@@ -1,5 +1,4 @@
 import Project from "~/components/Project/Project";
-import Dashline from "~/components/Dashline";
 import Division from "~/components/Project/Division";
 
 import projects from "~/public/staticData/projects";
@@ -36,8 +35,8 @@ const Projects = () => {
         //justify will cause scroll to become invalid, because it is as if all items are wrapped in a position: relative box. Overflow
         //won't trigger scrolls and overflowed content is not visible within parent.
 
-        //content-height is calculated ad-hoc solution. I spent too much time on this, I should move on and design other parts first.
-        <div id="projects" className="content-height mx-auto bg-yellow-200 flex flex-col items-center gap-y-4 overflow-x-hidden overflow-y-auto scroll-smooth">
+        //content-height is calculated under the assumption of header and footer with fixed height. I spent too much time on this, I should move on and design other parts first.
+        <div id="projects" className="content-height mx-auto bg-white dark:bg-black flex flex-col items-center gap-y-4 overflow-x-hidden overflow-y-auto scroll-smooth">
             {result}
         </div>
     );

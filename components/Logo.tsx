@@ -39,10 +39,10 @@ const Logo = ({str, idx, className}: IconProps) => {
         ["CSS", <Image src={"/logos/CSS_logo.svg"} alt="CSS" {...standardProps} />],
         ["React", <Image src={"/logos/React_logo.svg"} alt="React" {...standardProps} />],
         ["Sass", <Image src={"/logos/Sass_logo.svg"} alt="Sass" {...standardProps} />],
-        ["Django", <Image src={"/logos/Django_logo.svg"} alt="Django" width="95" height="33" />],
-        ["Nextjs", <Image src={"/logos/Nextjs_logo.svg"} alt="Nextjs" {...standardProps} />],
+        ["Django", <Image src={"/logos/Django_logo.svg"} alt="Django" width={85} height={30} />],
+        ["Nextjs", <Image src={"/logos/Nextjs_logo.svg"} alt="Nextjs" width={80} height={40} />],
 
-        ["Bootstrap", <Image src={"/logos/Bootstrap_logo.svg"} alt="Bootstrap" {...standardProps} />],
+        ["Bootstrap", <Image src={"/logos/Bootstrap_logo.svg"} alt="Bootstrap" width={60} height={50} />],
         ["Tailwind", <Image src={"/logos/Tailwind_logo.svg"} alt="Tailwind" {...standardProps} />],
 
         ["Gimp", <Image src={"/logos/Gimp_logo.svg"} alt="Gimp" {...standardProps} />],
@@ -50,7 +50,7 @@ const Logo = ({str, idx, className}: IconProps) => {
 
         ["GraphQL", <Image src={"/logos/GraphQL_logo.svg"} alt="GraphQL" {...standardProps} />],
         ["Graphene", <Image src={"/logos/Graphene-django_logo.svg"} alt="Graphene-django" {...standardProps} />],
-        ["Apollo", <Image src={"/logos/Apollo_logo.svg"} alt="Apollo" {...standardProps} />],
+        ["Apollo", <Image src={"/logos/Apollo_logo.svg"} alt="Apollo" width={95} height={33} />],
         
     ]);
 
