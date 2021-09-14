@@ -20,10 +20,10 @@ const Header = (): JSX.Element => {
 const Logo = (): JSX.Element => {
     const darkModeContext = useContext(DarkModeContext);
     const inDarkMode = darkModeContext.inDarkMode;
-    const commonProps = {width: 48, height: 48, alt: "logo of the website", priority: true};
+    const commonProps = {width: 48, height: 48, priority: true};
 
-    return inDarkMode ? <Image src={"/icons/websiteLogo_dark.svg"} {...commonProps} />
-                      : <Image src={"/icons/websiteLogo_light.svg"} {...commonProps} />;
+    return inDarkMode ? <Image src={"/icons/websiteLogo_dark.svg"} {...commonProps} alt="logo of the site" />
+                      : <Image src={"/icons/websiteLogo_light.svg"} {...commonProps} alt="logo of the site" />;
 }
 
 const DayNightSwitch = (): JSX.Element => {
