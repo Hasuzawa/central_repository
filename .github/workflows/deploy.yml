@@ -1,0 +1,14 @@
+name: Deploy App
+
+on:
+  worflow_run:
+    workflows: ["Integrated Test"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      name: Deploy to Vercel
+      run: echo "this workflow is not yet complete"

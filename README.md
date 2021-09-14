@@ -14,6 +14,7 @@ This project features:
 - Figma prototype. First time using Figma. It has list, scrolling, page transition and interactive button.
 - cypress testing. I have used Jest before but cypress is even more powerful.
 - high accessibility. The whole site can be navigated by [tab] and [enter/return] key alone.
+- CICD. GitHub actions for automated cypress testing and deployment.
 
 ## Wireframe/Prototype
 
@@ -37,6 +38,9 @@ Not very satisfied but I improved my practices a lot during trial and error so t
     <li>
         There seems to be a lot of directories for quite a simple app, but I want to keep this scalable.
         I know from first-hand experience that as an app grows, it becomes more and more difficult to move and modify files without breaking things.
+    </li>
+    <li>
+        set up CICD for the first time. With a few lines of code I can test the website on multiple OS and browser.
     </li>
 </ul>
 </details>

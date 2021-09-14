@@ -1,6 +1,7 @@
 import { useContext, Dispatch, SetStateAction} from "react";
 import DarkModeContext from "../contexts/DarkModeContext";
 import { Sun, Moon } from "phosphor-react";
+import Image from "next/image";
 
 
 const Header = (): JSX.Element => {
@@ -17,9 +18,12 @@ const Header = (): JSX.Element => {
 }
 
 const Logo = (): JSX.Element => {
-    return (
-        <span>logo</span>
-    );
+    const darkModeContext = useContext(DarkModeContext);
+    const inDarkMode = darkModeContext.inDarkMode;
+    const commonProps = {width: 48, height: 48, alt: "logo of the website"};
+
+    return inDarkMode ? <Image src={"/icons/websiteLogo_dark.svg"} {...commonProps} />
+                      : <Image src={"/icons/websiteLogo_light.svg"} {...commonProps} />;
 }
 
 const DayNightSwitch = (): JSX.Element => {

@@ -1,13 +1,16 @@
 name: Integrated Test
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 # [linux, mac, windows] x [chrome, firefox, edge]
-# naive way to do this, can use parallelisation in the future
+# naive way to do this, should use parallelisation in the future
 
 jobs:
 
-  test-chrome:
+  test-Chrome:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -23,7 +26,7 @@ jobs:
           start: npm start
           browser: chrome
 
-  test-firefox:
+  test-Firefox:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -37,11 +40,11 @@ jobs:
           build: npm run build
           start: npm start
           browser: firefox
-  test-on-edge:
+  test-Edge:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
+        os: [windows-latest, macos-latest]  #Edge is not yet available for Linux
     steps:
       - name: Checkout
         uses: actions/checkout@v2
