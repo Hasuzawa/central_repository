@@ -15,7 +15,9 @@ const config: webpack.Configuration = {
         extensions: [".css", ".sass", ".scss", "tsx"]
     },
     output: {
-        assetModuleFilename: "images/[hash][ext]"
+        assetModuleFilename: "images/[hash][ext]",
+        publicPath: "/_next/static/images/",
+        
     },
     module: {
         rules: [

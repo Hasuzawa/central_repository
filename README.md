@@ -12,7 +12,6 @@ This project features:
 - dynamic routing, static generation. Any data that is static can and should be fetched and done at build time.
 - automatically generated Table of Content and project feeds.
 - dark mode. Less eye fatigue, heat and energy for the same experience.
-- localStorage. Likely an overkill for what can be done in one click.
 - Figma prototype. First time using Figma. It has list, scrolling, page transition and interactive button.
 - cypress testing. I have used Jest before but cypress is even more powerful.
 - high accessibility. The whole site can be navigated by [tab] and [enter/return] key alone.
