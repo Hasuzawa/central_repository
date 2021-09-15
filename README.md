@@ -1,7 +1,7 @@
 ## Central Repository
 
 This repository summarizes my other projects. It has a brief description for every project and links
-to their page or repository.
+to their page or repository. The project is considered completed on 9/15/2021.
 
 [The project is deployed on Vercel.](https://central-repository.vercel.app/)
 

@@ -51,9 +51,9 @@ const projects: Project[] = [
         heading: "Webpage using GraphQL to fetch data",
         year: "2021",
 
-        status: "in design",
+        status: "in progress",
         short_description: "My first landmark project where I start from UI design, frontend to CICD, analytics.",
-        stringArray: ["Nextjs","Tailwind"],
+        stringArray: ["Nextjs", "Tailwind", "GraphQL"],
 
         logoArray: ["Nextjs", "Typescript"],
         link: "",
@@ -66,7 +66,7 @@ const projects: Project[] = [
         heading: "App with Next.js & Tailwind CSS (this project)",
         year: "2021",
 
-        status: "in progress",
+        status: "completed",
         short_description: 'This website itself. Powered by Next.js and Tailwind CSS. Has night mode and dynamically generated Table and Content.',
         stringArray: ["Nextjs", "Tailwind", "React", "cypress"],
         
@@ -80,9 +80,8 @@ const projects: Project[] = [
                 I refactored many parts of the project to keep it as concise and maintainable as possible.
             In the last few projects I always have the feeling I can do better, but the sea of entangled CSS,
             HTML feels like it is almost equivalent of re-writing the whole app. This is definitely the case
-            in my first project. I took more time writing this simple app adjusted by content, but this time
-            I am confident to say this is what I imagined it to be, with the exception of its UI and appearance,
-            that I cannot improve overnight.`,
+            in my first project. I can further improve it but I think my time is better spent on learning more
+            on other projects.`,
     },
     {
         projectName: "pizzeria-website-with-reservation-demo",
