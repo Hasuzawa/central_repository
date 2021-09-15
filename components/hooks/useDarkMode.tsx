@@ -10,7 +10,8 @@ const useDarkMode = (): [boolean, Dispatch<SetStateAction<boolean>>] => {
     const [inDarkMode, setDarkMode] = useState<boolean>( (): boolean => {
         let saved: string | null = "";
         try {
-          let saved = localStorage.getItem("inDarkMode");
+          saved = localStorage.getItem("inDarkMode");
+          console.log("saved dark mode value is", saved);
         } catch (ReferenceError){
           console.log("local storage is not available, dark mode setting will not be saved");
         }

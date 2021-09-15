@@ -1,4 +1,7 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import twitterImage from "~/public/meta_images/tw:image.png";
+import ogImage from "~/public/meta_images/og:image.png";
+
 
 
 class MyDocument extends Document{
@@ -25,7 +28,7 @@ class MyDocument extends Document{
                 <meta property="og:url"         content="https://central-repository.vercel.app/" />
                 <meta property="og:title"       content="Repository with Hasuzawa's Projects" />
                 <meta property="og:description" content="The website is a repository containing all projects by Hasuzawa Yuichi." />
-                <meta property="og:image"       content={"/meta-images/og:banner.png"} />
+                <meta property="og:image"       content={ogImage.src} />
 
                 <meta property="og:site_name"   content="Hasuzawa's repositories" />
 
@@ -35,7 +38,7 @@ class MyDocument extends Document{
                 <meta property="twitter:title"      content="Repository with Hasuzawa's Projects"  />
                 <meta property="twitter:description"content="The website with all projects by Hasuzawa Yichi."  />
                 <meta property="twitter:url"        content="https://central-repository.vercel.app/"  />
-                <meta property="twitter:image"      content={"/meta-images/tw:card.png"} />
+                <meta property="twitter:image"      content={twitterImage.src} />
                 <meta property="twitter:image:alt"  content="the logo and table of content of the website"  />
                 {/* <meta property="twitter:site"       content=""  /> only needed if you want to mention an account on twitter */}
 

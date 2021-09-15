@@ -14,10 +14,15 @@ const config: webpack.Configuration = {
         },
         extensions: [".css", ".sass", ".scss", "tsx"]
     },
+    output: {
+        assetModuleFilename: "images/[hash][ext]"
+    },
     module: {
-        rules: [{
+        rules: [
+            {
             test: /\.(png|jpg|jpeg|gif|svg)$/i,
             type: "asset/resource"
-        }]
-    }
+            }
+        ]
+    },
 }

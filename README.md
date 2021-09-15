@@ -3,10 +3,12 @@
 This repository summarizes my other projects. It has a brief description for every project and links
 to their page or repository.
 
+[The project is deployed on Vercel.](https://central-repository.vercel.app/)
+
 ## Features
 
 This project features:
-- Next.js, Tailwind CSS.
+- Next.js, Tailwind CSS. They have great synergy.
 - dynamic routing, static generation. Any data that is static can and should be fetched and done at build time.
 - automatically generated Table of Content and project feeds.
 - dark mode. Less eye fatigue, heat and energy for the same experience.

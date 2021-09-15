@@ -2,13 +2,14 @@ import { useContext, Dispatch, SetStateAction} from "react";
 import DarkModeContext from "../contexts/DarkModeContext";
 import { Sun, Moon } from "phosphor-react";
 import Image from "next/image";
-
+import websiteLogoDark from "~/public/icons/websiteLogo_dark.svg";
+import websiteLogoLight from "~/public/icons/websiteLogo_light.svg";
 
 const Header = (): JSX.Element => {
 
 
     return (
-        <div id="header" className={`h-16 w-screen flex-none flex flex-row justify-between items-center
+        <div id="header" className={`h-16 w-screen flex-none flex flex-row justify-between items-center sticky bottom-0
             border-b-2 border-black shadow_around z-50 px-4 dark:bg-black dark:text-white dark:border-white`}>
             <Logo />
             <span>Hasuzawa&apos;s projects</span>
@@ -20,10 +21,10 @@ const Header = (): JSX.Element => {
 const Logo = (): JSX.Element => {
     const darkModeContext = useContext(DarkModeContext);
     const inDarkMode = darkModeContext.inDarkMode;
-    const commonProps = {width: 48, height: 48, priority: true};
+    const commonProps = {width: 48, height: 48};
 
-    return inDarkMode ? <Image src={"/icons/websiteLogo_dark.svg"} {...commonProps} alt="logo of the site" />
-                      : <Image src={"/icons/websiteLogo_light.svg"} {...commonProps} alt="logo of the site" />;
+    return inDarkMode ? <Image src={websiteLogoDark.src} {...commonProps} alt="logo of the site" priority placeholder={websiteLogoDark.blurDataURL} />
+                      : <Image src={websiteLogoLight.src} {...commonProps} alt="logo of the site" priority placeholder={websiteLogoLight.blurDataURL} />;
 }
 
 const DayNightSwitch = (): JSX.Element => {
