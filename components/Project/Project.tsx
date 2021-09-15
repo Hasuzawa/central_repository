@@ -1,11 +1,11 @@
-import Status from "~/components/Project/Status";
+import Status, { projectStatus } from "~/components/Project/Status";
 import { StringToTags } from "~/components/Tag";
 import { useRouter, NextRouter } from "next/router";
 
 type ProjectProps = {
     readonly projectName: string;
     readonly heading: string;
-    readonly status: "completed" | "in progress" | "on hiatus" | "in design";
+    readonly status: projectStatus;
     readonly short_description: string;
     readonly stringArray: string[];
     readonly HTML_id?: string;

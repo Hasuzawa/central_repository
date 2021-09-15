@@ -1,11 +1,12 @@
 import React from "react";
 
+type projectStatus = "scheduled" | "in design" | "on hiatus" | "in progress" | "completed";
 
-type status = "completed" | "in progress" | "on hiatus" | "in design";
 type statusProps = {
-    readonly status: status;
+    readonly status: projectStatus;
     readonly className?: string;
 }
+
 const Status = ({status, className}: statusProps): JSX.Element => {
 
     let commonProps = className ? className : "";
@@ -15,6 +16,7 @@ const Status = ({status, className}: statusProps): JSX.Element => {
         case "in progress": bgColor = "bg-yellow-500"; break;
         case "on hiatus": bgColor = "bg-red-500"; break;
         case "in design": bgColor = "bg-purple-500"; break;
+        case "scheduled": bgColor = "bg-pink-400"; break;
     }
 
     return (
@@ -22,5 +24,5 @@ const Status = ({status, className}: statusProps): JSX.Element => {
     );
 }
 
-export type { status };
+export type { projectStatus };
 export default Status

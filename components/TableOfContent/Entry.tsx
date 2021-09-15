@@ -1,6 +1,6 @@
-import { PaintBrush, Play, Pause, Check } from "phosphor-react";
+import { PaintBrush, Play, Pause, Check, CalendarBlank } from "phosphor-react";
 import { Project } from "~/public/staticData/projects";
-import { status } from "~/components/Project/Status";
+import { projectStatus } from "~/components/Project/Status";
 
 interface EntryProps{
     project: Project;
@@ -15,15 +15,16 @@ const Entry = ({project}: EntryProps) => {
     const heading = project.heading;
 
     
-    function getIcon(status: status){
+    function getIcon(status: projectStatus){
         const size = 24;
         const commonProps = {size: size, className: "flex-grow-0 flex-shrink-0"};
 
         switch (status){
-            case "in design": return <PaintBrush {...commonProps} />
-            case "on hiatus": return <Pause {...commonProps} />
-            case "in progress": return <Play {...commonProps} />
-            case "completed": return <Check {...commonProps} />
+            case "in design": return <PaintBrush {...commonProps} />;
+            case "on hiatus": return <Pause {...commonProps} />;
+            case "in progress": return <Play {...commonProps} />;
+            case "completed": return <Check {...commonProps} />;
+            case "scheduled": return <CalendarBlank {...commonProps} />;
         }
     }
 

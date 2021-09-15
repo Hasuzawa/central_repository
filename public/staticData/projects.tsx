@@ -1,9 +1,11 @@
+import { projectStatus } from "~/components/Project/Status";
+
 interface Project{
     projectName: string;    //used for page generation, will be visible in the URL in generated page, use hyphen in place of space.
     HTML_id: string;        //used as HTML id and referenced when scrolling
     heading: string;        //the title in feed form
     year: string;           //the year the project has started
-    status: "completed" | "in progress" | "on hiatus" | "in design";    //the current status of the project
+    status: projectStatus;    //the current status of the project
     short_description: string;      //displayed in feed form
     stringArray: string[];          //some tags to indicate what the project uses or is about in feed form
 
@@ -15,12 +17,27 @@ interface Project{
 
 const projects: Project[] = [
     {
+        projectName: "project-7",
+        HTML_id: "project-7",
+        heading: "My homepage re-made",
+        year: "2021",
+
+        status: "scheduled",
+        short_description: "",
+        stringArray: ["Next.js", "React"],
+
+        logoArray: [],
+        link: "",
+        long_description: `My first website and homepage is too mediocre. I make a new website from ground up
+            befitting a professional developer.`
+    },
+    {
         projectName: "project-6",
         HTML_id: "project-6",
         heading: "Animation-oriented website",
         year: "2021",
 
-        status: "in design",
+        status: "scheduled",
         short_description: "A website focusing on animated HTML elements.",
         stringArray: ["React Framer", "React Transition Group"],
 
@@ -53,7 +70,7 @@ const projects: Project[] = [
 
         status: "in progress",
         short_description: "My first landmark project where I start from UI design, frontend to CICD, analytics.",
-        stringArray: ["Nextjs", "Tailwind", "GraphQL"],
+        stringArray: ["Next.js", "Tailwind", "GraphQL"],
 
         logoArray: ["Nextjs", "Typescript"],
         link: "",
