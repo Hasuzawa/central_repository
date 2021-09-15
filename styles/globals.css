@@ -32,7 +32,7 @@ html{
 
 .center{
     flex: 1 1 0;
-    height: calc(100% - 8em);
+    max-height: calc(100% - 8em);
 }
 
 #footer{

@@ -71,7 +71,7 @@ const Footer = ({displayReturn = true, displayTableOfContent = true, displayAbou
     }
 
     return (
-        <div id="footer" className={`w-screen border-t-2 border-black
+        <div id="footer" className={`w-screen border-t-2 border-black bg-white
             shadow_around z-50 dark:bg-black dark:text-white dark:border-white flex flex-row justify-around items-center`}>
             <div className="md:hidden">
                 {displayTableOfContentButton()}
