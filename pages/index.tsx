@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <title>Projects by Hasuzawa</title>
       </Head>
       <Header />
-      <main id="main" className="flex-1 min-h-0 flex flex-row dark:bg-black dark:text-white">
+      <main id="main" className="center flex flex-row dark:bg-black dark:text-white">
 
       {/* <main id="main" className="flex-1 min-h-0 flex flex-row content-height dark:bg-black dark:text-white overflow-y-hidden"> */}
         <div id="main-left" className="hidden md:block flex-1 height-full border-r-2 border-black dark:border-white min-w-0 min-h-0">

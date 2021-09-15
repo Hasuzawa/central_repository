@@ -21,3 +21,23 @@ html{
         }
     }
 }
+
+/* double styling by flex and positon because viewheight is too inconsistent */
+#header{
+    flex: 0 0 auto;
+    height: 4em;
+    position: sticky;
+    top: 0;
+}
+
+.center{
+    flex: 1 1 0;
+    height: calc(100% - 8em);
+}
+
+#footer{
+    flex: 0 0 auto;
+    height: 4em;
+    position: sticky;
+    bottom: 0;
+}
