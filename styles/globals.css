@@ -52,6 +52,6 @@ html{
     right: 0;
 }
 
-#main-middle{
+.main-container{
     max-height: calc(100% - 8em);
 }
