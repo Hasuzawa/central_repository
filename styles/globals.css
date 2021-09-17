@@ -55,3 +55,7 @@ html{
 .main-container{
     max-height: calc(100% - 8em);
 }
+.main-margin{
+    margin-top: 4em;
+    margin-bottom: 4em;
+}

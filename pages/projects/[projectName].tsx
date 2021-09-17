@@ -47,8 +47,8 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
             </Head>
             <Header />
             <div className={`center w-screen h-screen flex justify-center overflow-y-hidden relative ` + getDarkModeClassName("main")} >
-                <main className={`h-full max-w-screen-lg flex flex-col gap-y-2
-                    overflow-x-hidden overflow-y-scroll p-4 `}>
+                <main className={`fixed top-0 bottom-0 main-margin max-w-screen-lg flex flex-col gap-y-2
+                    overflow-x-hidden overflow-y-scroll p-4`}>
                     <div className="flex justify-between">
                         <h1>{project.heading}</h1>
                         <Status status={project.status} />
