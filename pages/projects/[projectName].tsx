@@ -38,6 +38,7 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
             return <Link href={link}><a className="flex"><LinkIcon size={24} />redirect</a></Link>;
         }
     }
+    console.log(project.logoArray);
 
     return (
         <div className={"flex flex-col w-screen h-screen overflow-y-hidden" + getDarkModeClassName("page")}>
@@ -45,17 +46,19 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
                 <title>{project.projectName}</title>
             </Head>
             <Header />
-            <div className={`center w-screen flex justify-center overflow-y-hidden` + getDarkModeClassName("main")} >
-                <main className={`h-full max-w-screen-lg self-center flex flex-col gap-y-2 min-w-0 min-h-0
-                    overflow-x-hidden overflow-y-scroll p-4 main-container`}>
+            <div className={`center w-screen h-screen flex justify-center overflow-y-hidden relative ` + getDarkModeClassName("main")} >
+                <main className={`h-full max-w-screen-lg flex flex-col gap-y-2
+                    overflow-x-hidden overflow-y-scroll p-4 `}>
                     <div className="flex justify-between">
                         <h1>{project.heading}</h1>
                         <Status status={project.status} />
                     </div>
                     {/* note that black logos will be invisible in dark mode */}
-                    <div className="flex flex-row items-center gap-x-2 px-1 py-1 bg-white">
-                        <StringToLogos stringArray={project.logoArray} className="flex items-center" />
-                    </div>
+                    { project.logoArray && project.logoArray.length > 0 &&
+                        <div className="flex flex-row items-center gap-x-2 px-1 py-1 bg-white">
+                            <StringToLogos stringArray={project.logoArray} className="flex items-center" />
+                        </div>
+                    }
                     <div className="flex justify-between">
                         <span>year: {project.year}</span>
                         {getLink(project.link)}

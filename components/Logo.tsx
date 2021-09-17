@@ -72,16 +72,15 @@ type StringToLogosProps = {
     className?: string;
 }
 
-const StringToLogos = ({stringArray, className}: StringToLogosProps) => {
-    return (
+const StringToLogos = ({stringArray, className}: StringToLogosProps): JSX.Element | null => {
+    return stringArray && stringArray.length > 0 ?
         <>
-            {stringArray?.map((str: string, idx: number) => (
-                <span className={className} key={idx}>
-                    <Logo str={str} key={idx} idx={idx}/>
-                </span>
-            ))}
-        </>
-    );
+        {stringArray?.map((str: string, idx: number) => (
+            <span className={className} key={idx}>
+                <Logo str={str} key={idx} idx={idx}/>
+            </span>
+        ))}
+    </> : null
 }
 
 export { Logo };

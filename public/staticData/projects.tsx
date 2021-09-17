@@ -55,7 +55,7 @@ const projects: Project[] = [
 
         status: "in progress",
         short_description: "A simple 3D project.",
-        stringArray: ["react-three-fiber", "react-three-cannon", "three.js"],
+        stringArray: ["three-fiber", "three-cannon", "three.js"],
 
         logoArray: ["Typescript"],
         link: "",
