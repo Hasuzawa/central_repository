@@ -9,7 +9,7 @@ const Header = (): JSX.Element => {
 
 
     return (
-        <div id="header" className={`w-screen flex flex-row justify-between items-center bg-white
+        <div id="header" className={`w-screen flex flex-row justify-between items-center bg-white absolute top-0 left-0 right-0
             border-b-2 border-black shadow_around z-50 px-4 dark:bg-black dark:text-white dark:border-white`}>
             <Logo />
             <span>Hasuzawa&apos;s projects</span>

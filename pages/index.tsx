@@ -16,7 +16,7 @@ import getDarkModeClassName from "darkModeCSS/darkModeClassNames";
 const Home: NextPage = () => {
 
   return (
-    <div className={"h-screen w-screen flex flex-col" + getDarkModeClassName("page")}>
+    <div className={"h-screen w-screen flex flex-col relative" + getDarkModeClassName("page")}>
       <Head>
         <title>Projects by Hasuzawa</title>
       </Head>
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <div id="main-left" className="hidden md:block flex-1 height-full border-r-2 border-black dark:border-white min-w-0 min-h-0">
           <TableOfContent />
         </div>
-        <div id="main-middle" className="flex-none w-screen relative md:w-3/5 lg:w-2/5 h-full overflow-hidden">
+        <div id="main-middle" className="flex-none min-h-0 w-screen relative md:w-3/5 lg:w-2/5 overflow-y-hidden">
           <Projects />
         </div>
         <div id="main-right" className="hidden lg:block flex-1 border-l-2 border-black dark:border-white min-w-0 min-h-0">

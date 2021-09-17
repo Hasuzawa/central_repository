@@ -23,7 +23,7 @@ const projects: Project[] = [
         year: "2021",
 
         status: "scheduled",
-        short_description: "",
+        short_description: "I re-made my homepage using all the skills and tools I have acquired.",
         stringArray: ["Next.js", "React"],
 
         logoArray: [],
@@ -39,7 +39,7 @@ const projects: Project[] = [
 
         status: "scheduled",
         short_description: "A website focusing on animated HTML elements.",
-        stringArray: ["React Framer", "React Transition Group"],
+        stringArray: ["React Framer"],
 
         logoArray: ["React", "Typescript"],
         link: "",
@@ -48,12 +48,12 @@ const projects: Project[] = [
             and react. It is only natural to utilise them to enhance the user experience.`
     },
     {
-        projectName: "project-5",
-        HTML_id: "project-5",
-        heading: "3d animation using Typescript",
+        projectName: "3d-dice-thrower",
+        HTML_id: "3d-dice-thrower",
+        heading: "3D animation using Typescript",
         year: "2021",
 
-        status: "in design",
+        status: "in progress",
         short_description: "A simple 3D project.",
         stringArray: ["react-three-fiber", "react-three-cannon", "three.js"],
 

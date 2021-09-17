@@ -7,6 +7,7 @@ interface darkModeClassNames{
     header: string;
     main: string;
     footer: string;
+    scrollbar: string
 }
 
 /**
@@ -19,6 +20,7 @@ const darkModeClassNames: darkModeClassNames = {
     header: " dark:bg-black dark:text-white",
     main: " dark:bg-black dark:text-white",
     footer: " dark:bg-black dark:text-white",
+    scrollbar: " dark:white-thumb"
 }
 
 

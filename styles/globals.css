@@ -26,18 +26,32 @@ html{
 #header{
     flex: 0 0 auto;
     height: 4em;
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
 }
 
 .center{
     flex: 1 1 0;
-    max-height: calc(100% - 8em);
+    position: absolute;
+    max-height: 100%;
+    overflow-y: hidden;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    left: 0;
+    right: 0;
 }
 
 #footer{
     flex: 0 0 auto;
     height: 4em;
-    position: sticky;
+    position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#main-middle{
+    max-height: calc(100% - 8em);
 }

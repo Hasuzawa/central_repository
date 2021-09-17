@@ -1,27 +1,33 @@
+/* scrollbar and thumb are required, scrollbar controls width */
 .custom_scrollbar::-webkit-scrollbar{
-
+    width: 6px;
+    background-color: transparent;
 }
 .custom_scrollbar::-webkit-scrollbar-button{
-
+    /* set to none */
 }
 .custom_scrollbar::-webkit-scrollbar-corner{
-
+    /* not needed */
 }
 .custom_scrollbar::-webkit-scrollbar-thumb{
-
+    border-radius: 999px;
+    background-color: rgb(148, 148, 148);
 }
 .custom_scrollbar::-webkit-scrollbar-track{
-
+    /* not needed */
 }
 .custom_scrollbar::-webkit-scrollbar-track-piece{
-    
-}
-.mostly-customized-scrollbar::-webkit-scrollbar {
-    width: 5px;
-    height: 8px;
-    background-color: #aaa; /* or add it to the track */
+    /* not needed */
 }
 
-.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-    background: #000;
+/*      for dark mode        */
+
+/* .white-thumb::-webkit-scrollbar{
+    width: 6px;
+    background-color: transparent;
 }
+
+.white-thumb::-webkit-scrollbar-thumb{
+    border-radius: 999px;
+    background-color: white;
+} */
