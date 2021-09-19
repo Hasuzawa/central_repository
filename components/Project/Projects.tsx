@@ -3,7 +3,6 @@ import Division from "~/components/Project/Division";
 
 import projects from "~/public/staticData/projects";
 import styles from "~/styles/moduleCSS/customScrollbar.module.css";
-import getDarkModeClassName from "~/darkModeCSS/darkModeClassNames";
 
 const Projects = () => {
 
@@ -37,9 +36,8 @@ const Projects = () => {
         //justify will cause scroll to become invalid, because it is as if all items are wrapped in a position: relative box. Overflow
         //won't trigger scrolls and overflowed content is not visible within parent.
 
-        //content-height is calculated under the assumption of header and footer with fixed height. I spent too much time on this, I should move on and design other parts first.
         <div id="projects" className={`h-full mx-auto bg-white dark:bg-black flex flex-col items-center gap-y-4
-            overflow-x-hidden overflow-y-auto scroll-smooth ${styles.custom_scrollbar} ${getDarkModeClassName("scrollbar")}`}
+            overflow-x-hidden overflow-y-auto scroll-smooth ${styles.custom_scrollbar}`}
         >
             {result}
         </div>

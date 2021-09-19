@@ -9,13 +9,14 @@ to their page or repository. The project is considered completed on 9/15/2021.
 
 This project features:
 - Next.js, Tailwind CSS. They have great synergy.
-- dynamic routing, static generation. Any data that is static can and should be fetched and done at build time.
-- automatically generated Table of Content and project feeds.
-- dark mode. Less eye fatigue, heat and energy for the same experience.
+- Dynamic routing, static generation. Any data that is static can and should be fetched and done at build time.
+- Automatically generated Table of Content and project feeds.
+- Dark mode. Less eye fatigue, heat and energy for the same experience.
 - Figma prototype. First time using Figma. It has list, scrolling, page transition and interactive button.
 - cypress testing. I have used Jest before but cypress is even more powerful.
-- high accessibility. The whole site can be navigated by [tab] and [enter/return] key alone.
+- High accessibility. The whole site can be navigated by [tab] and [enter/return] key alone.
 - CICD. GitHub actions for automated cypress testing and deployment.
+- Custom scrollbar. Minimalistic style. Most CSS properties have no effect. I shall see if I can find way to use it to its extreme in the future.
 
 ## Wireframe/Prototype
 
@@ -45,6 +46,9 @@ Not very satisfied but I improved my practices a lot during trial and error so t
     </li>
     <li>
         After numerous attempt, I finally fixed a layout bug that only occurs on phone. It seems that the viewport of browser on phone is very inconsistent as phone has their own footer with page transition, bookmarks etc. They woud cause a flex-based layout collapse. I had to brute-force a position:fixed/absolute with margin/padding solution.
+    </li>
+    <li>
+        Custom scrollbar done. Nowadays it is supported by most browsers so it is viable to use on production build.
     </li>
 </ul>
 </details>

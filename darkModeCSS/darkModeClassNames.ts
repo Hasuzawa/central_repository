@@ -7,20 +7,19 @@ interface darkModeClassNames{
     header: string;
     main: string;
     footer: string;
-    scrollbar: string
 }
 
 /**
  * @remark
  * centralized object to change darkmode. Afterall, with Tailwind CSS and React,
  * dark mode can be reduced to string manipulation on class names.
+ * note: only tailwind props are valid. class names in global.js will have a different name when compiled
  */
 const darkModeClassNames: darkModeClassNames = {
     page: " dark",
     header: " dark:bg-black dark:text-white",
     main: " dark:bg-black dark:text-white",
-    footer: " dark:bg-black dark:text-white",
-    scrollbar: " dark:white-thumb"
+    footer: " dark:bg-black dark:text-white"
 }
 
 

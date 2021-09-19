@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from "next/link";
 import type { NextPage, GetStaticPaths, GetStaticProps } from "next";
 
@@ -13,6 +12,7 @@ import Header from "~/components/Header/Header";
 import Footer from "~/components/Footer/Footer";
 
 import getDarkModeClassName from "darkModeCSS/darkModeClassNames";
+import styles from "~/styles/moduleCSS/customScrollbar.module.css";
 
 interface ProjectPageProps{
     props: {
@@ -48,7 +48,7 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
             <Header />
             <div className={`center w-screen h-screen flex justify-center overflow-y-hidden relative ` + getDarkModeClassName("main")} >
                 <main className={`fixed top-0 bottom-0 main-margin max-w-screen-lg flex flex-col gap-y-2
-                    overflow-x-hidden overflow-y-scroll p-4`}>
+                    overflow-x-hidden overflow-y-auto p-4 ${styles.custom_scrollbar}`}>
                     <div className="flex justify-between">
                         <h1>{project.heading}</h1>
                         <Status status={project.status} />
@@ -63,9 +63,6 @@ const ProjectPage: NextPage<ProjectPageProps> = (props: ProjectPageProps) => {
                         <span>year: {project.year}</span>
                         {getLink(project.link)}
                     </div>
-                    
-
-                    {/* <span>year is {project.year}</span> */}
                     <p>
                         {project.long_description}
                     </p>
