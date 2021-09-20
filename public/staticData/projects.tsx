@@ -19,11 +19,11 @@ const projects: Project[] = [
     {
         projectName: "project-7",
         HTML_id: "project-7",
-        heading: "My homepage re-made",
+        heading: "My homepage redux",
         year: "2021",
 
         status: "scheduled",
-        short_description: "I re-made my homepage using all the skills and tools I have acquired.",
+        short_description: "I make a new homepage using all the skills and tools I have acquired.",
         stringArray: ["Next.js", "React"],
 
         logoArray: [],
@@ -38,14 +38,16 @@ const projects: Project[] = [
         year: "2021",
 
         status: "scheduled",
-        short_description: "A website focusing on animated HTML elements.",
-        stringArray: ["React Framer"],
+        short_description: "A website focusing on animated HTML elements. I also try out multiple locale.",
+        stringArray: ["React Framer", "locale"],
 
         logoArray: ["React", "Typescript"],
         link: "",
-        long_description: `With libraries such as React Framer and React Transition Group, essentially
-            one can write website as if writing a phone app. The React ecosystem is entirely about change
-            and react. It is only natural to utilise them to enhance the user experience.`
+        long_description: `With libraries such as React Framer ,one can essentially
+            write website as if writing a phone app in React Native. The React ecosystem is entirely about change
+            and react. It is only natural to utilise them to enhance the user experience.
+            I also try out the locale feature of Next.js to render pages in different languages. It would drastically
+            increase the difficulty of managing web content.`
     },
     {
         projectName: "3d-dice-thrower",
@@ -54,7 +56,7 @@ const projects: Project[] = [
         year: "2021",
 
         status: "in progress",
-        short_description: "A simple 3D project.",
+        short_description: "A simple 3D project using popular JS, React frameworks.",
         stringArray: ["three-fiber", "three-cannon", "three.js"],
 
         logoArray: ["Typescript"],
@@ -70,7 +72,7 @@ const projects: Project[] = [
 
         status: "in progress",
         short_description: "My first landmark project where I start from UI design, frontend to CICD, analytics.",
-        stringArray: ["Next.js", "Tailwind", "GraphQL"],
+        stringArray: ["Next.js", "Apollo", "GraphQL", "Framer"],
 
         logoArray: ["Nextjs", "Typescript"],
         link: "",
@@ -131,7 +133,7 @@ const projects: Project[] = [
         long_description: `I know I need to know how to interact with API and that was the premise of
             this project. There is REST framework but GraphQL caught my attention. Initially I thought
             it would be similar to SQL, which is not quite the reality. But they do have one thing in
-            common: query. Ideally, they should get what developers want, no more no less.`,
+            common: query. Ideally, they should get retrieve what the developer want efficiently.`,
     },
     {
         projectName: "website-with-React-and-Sass",
