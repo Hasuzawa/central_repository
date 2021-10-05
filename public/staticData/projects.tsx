@@ -15,10 +15,10 @@ interface Project{
     long_description?: string;      //the full description of the project
 }
 
-const projects: Project[] = [
+const projects: Readonly<Project[]> = [
     {
-        projectName: "project-7",
-        HTML_id: "project-7",
+        projectName: "homepage-redux",
+        HTML_id: "project-8",
         heading: "My homepage redux",
         year: "2021",
 
@@ -32,21 +32,37 @@ const projects: Project[] = [
             befitting a professional developer.`
     },
     {
-        projectName: "project-6",
-        HTML_id: "project-6",
-        heading: "Animation-oriented website",
+        projectName: "react-native-app",
+        HTML_id: "project-7",
+        heading: "React Native App",
         year: "2021",
 
-        status: "scheduled",
-        short_description: "A website focusing on animated HTML elements. I also try out multiple locale.",
-        stringArray: ["React Framer", "locale"],
+        status: "in design",
+        short_description: "I use React Natie to make a mobile app.",
+        stringArray: ["React Native", "Material UI"],
 
-        logoArray: ["React", "Typescript"],
+        logoArray: [],
+        link: "",
+        long_description: `React Native can make mobile app that can run on both iOS and Android. I am aware of
+            other tools including Kotlin, Swift, Flutter. But React Native can migrate more knowledge on web dev to
+            mobile dev and is a decent starting point.`
+    },
+    {
+        projectName: "multiple-locale-website",
+        HTML_id: "project-6",
+        heading: "Website with multiple locale",
+        year: "2021",
+
+        status: "in design",
+        short_description: "A website with subpath-based locale. There is also a focus on animation and immersion.",
+        stringArray: ["i18n", "Next.js", "React Framer", "locale"],
+
+        logoArray: ["Nextjs", "React", "Typescript"],
         link: "",
         long_description: `With libraries such as React Framer ,one can essentially
             write website as if writing a phone app in React Native. The React ecosystem is entirely about change
             and react. It is only natural to utilise them to enhance the user experience.
-            I also try out the locale feature of Next.js to render pages in different languages. It would drastically
+            I also try out the locale feature of Next.js to render pages in different languages. It might drastically
             increase the difficulty of managing web content.`
     },
     {
@@ -55,29 +71,34 @@ const projects: Project[] = [
         heading: "3D animation using Typescript",
         year: "2021",
 
-        status: "in progress",
+        status: "on hiatus",
         short_description: "A simple 3D project using popular JS, React frameworks.",
         stringArray: ["three-fiber", "three-cannon", "three.js"],
 
         logoArray: ["Typescript"],
         link: "",
-        long_description: `I found many libraries that greatly simplify the process of rendering 3D objects
+        long_description: `I found many great libraries that greatly simplify the process of rendering 3D objects
             in JS. I put together what I know as a simple project.`,
     },
     {
-        projectName: "project-4",
+        projectName: "anime-lister",
         HTML_id: "project-4",
-        heading: "Webpage using GraphQL to fetch data",
+        heading: "Webpage with GraphQL, API fetching, pagination",
         year: "2021",
 
-        status: "in progress",
-        short_description: "My first landmark project where I start from UI design, frontend to CICD, analytics.",
+        status: "completed",
+        short_description: "My first landmark project where I do everything from UI design, frontend, API to CICD, analytics, deployment.",
         stringArray: ["Next.js", "Apollo", "GraphQL", "Framer"],
 
-        logoArray: ["Nextjs", "Typescript"],
-        link: "",
-        long_description: `This will be my first complete project where I design the UI, write the frontend, do testing, configure domain name, deploy,
-            add analytics.`,
+        logoArray: ["Nextjs", "Typescript", "Apollo", "GraphQL", "Framer", "Tailwind", "MobX"],
+        link: "https://github.com/Hasuzawa/anime_lister",
+        long_description: `This is my first complete project where I design the UI, write the frontend, do testing, configure domain name, deploy,
+            add analytics. The API fetching, pagination, filtering and sorting is done using GraphQL, Apollo Client. I also used MobX for state
+            management. I know Redux, but it is notoriously verbose. I have to say I have almost reached the limit in the component
+            that is essentially the intersection of 3 independent frameworks. That component needs to handle state, fetch API, animate
+            layout changes. At one point I encountered an error that even the developer behind React did not anticipate.
+                The website aims to be very compact with a functionality-first approach.
+            `,
     },
     {
         projectName: "project-summary",

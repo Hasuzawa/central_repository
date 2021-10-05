@@ -44,6 +44,7 @@ const Logo = ({str, idx, className}: IconProps) => {
 
         ["Bootstrap", <Image src={"/logos/Bootstrap_logo.svg"} alt="Bootstrap" width={60} height={50} key={12}/>],
         ["Tailwind", <Image src={"/logos/Tailwind_logo.svg"} alt="Tailwind" {...standardProps} key={13}/>],
+        ["Framer", <Image src={"/logos/FramerMotion_logo.png"} alt="Framer" {...standardProps} key={19} />],
 
         ["Gimp", <Image src={"/logos/Gimp_logo.svg"} alt="Gimp" {...standardProps} key={14}/>],
         ["Inkscape", <Image src={"/logos/Inkscape_logo.svg"} alt="Inkscape" {...standardProps} key={15}/>],
@@ -51,6 +52,8 @@ const Logo = ({str, idx, className}: IconProps) => {
         ["GraphQL", <Image src={"/logos/GraphQL_logo.svg"} alt="GraphQL" {...standardProps} key={16}/>],
         ["Graphene", <Image src={"/logos/Graphene-django_logo.svg"} alt="Graphene-django" {...standardProps} key={17}/>],
         ["Apollo", <Image src={"/logos/Apollo_logo.svg"} alt="Apollo" width={95} height={33} key={18}/>],
+
+        ["MobX", <Image src={"/logos/MobX_logo.png"} alt="MobX" {...standardProps} key={20} />],
         
     ]);
 
