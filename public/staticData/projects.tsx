@@ -68,7 +68,7 @@ const projects: Readonly<Project[]> = [
     {
         projectName: "3d-dice-thrower",
         HTML_id: "3d-dice-thrower",
-        heading: "3D animation using Typescript",
+        heading: "3D animation on website",
         year: "2021",
 
         status: "on hiatus",
@@ -92,12 +92,13 @@ const projects: Readonly<Project[]> = [
 
         logoArray: ["Nextjs", "Typescript", "Apollo", "GraphQL", "Framer", "Tailwind", "MobX"],
         link: "https://github.com/Hasuzawa/anime_lister",
-        long_description: `This is my first complete project where I design the UI, write the frontend, do testing, configure domain name, deploy,
-            add analytics. The API fetching, pagination, filtering and sorting is done using GraphQL, Apollo Client. I also used MobX for state
+        long_description: `This is my first complete project where I design the UI, write the frontend, do testing, perform CI and deploy.
+            The API fetching, pagination, filtering and sorting is done using GraphQL, Apollo Client. I also used MobX for state
             management. I know Redux, but it is notoriously verbose. I have to say I have almost reached the limit in the component
             that is essentially the intersection of 3 independent frameworks. That component needs to handle state, fetch API, animate
             layout changes. At one point I encountered an error that even the developer behind React did not anticipate.
-                The website aims to be very compact with a functionality-first approach.
+                The website aims to be very compact with a functionality-first approach. In this regard, I have achieved the
+            result. There is some space left for more functionality which I might add later.
             `,
     },
     {
