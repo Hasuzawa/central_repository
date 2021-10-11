@@ -18,7 +18,7 @@ interface Project{
 const projects: Readonly<Project[]> = [
     {
         projectName: "homepage-redux",
-        HTML_id: "project-8",
+        HTML_id: "project-10",
         heading: "My homepage redux",
         year: "2021",
 
@@ -32,8 +32,22 @@ const projects: Readonly<Project[]> = [
             befitting a professional developer.`
     },
     {
+        projectName: "svelte-website",
+        HTML_id: "project-9",
+        heading: "Svelte Website",
+        year: "2021",
+
+        status: "scheduled",
+        short_description: "The Svelte framework is gaining popularity. I give it a try.",
+        stringArray: ["Svelte"],
+
+        logoArray: [],
+        link: "",
+        long_description: "I use the Svelte framework to make a website."
+    },
+    {
         projectName: "react-native-app",
-        HTML_id: "project-7",
+        HTML_id: "project-8",
         heading: "React Native App",
         year: "2021",
 
@@ -49,15 +63,15 @@ const projects: Readonly<Project[]> = [
     },
     {
         projectName: "multiple-locale-website",
-        HTML_id: "project-6",
-        heading: "Website with multiple locale",
+        HTML_id: "project-7",
+        heading: "Website with multiple locale, animated layout",
         year: "2021",
 
-        status: "in design",
+        status: "in progress",
         short_description: "A website with subpath-based locale. There is also a focus on animation and immersion.",
-        stringArray: ["i18n", "Next.js", "React Framer", "locale"],
+        stringArray: ["i18n", "locale", "Next.js", "React Framer"],
 
-        logoArray: ["Nextjs", "React", "Typescript"],
+        logoArray: ["Nextjs", "React", "Typescript", "Framer", "Tailwind"],
         link: "",
         long_description: `With libraries such as React Framer ,one can essentially
             write website as if writing a phone app in React Native. The React ecosystem is entirely about change
@@ -66,8 +80,23 @@ const projects: Readonly<Project[]> = [
             increase the difficulty of managing web content.`
     },
     {
+        projectName: "algorithm-article-research",
+        HTML_id: "project-6",
+        heading: "C++ algorithm and useful references",
+        year: "2021",
+
+        status: "completed",
+        short_description: "A repository where I publish some useful references, simple algorithm or articles.",
+        stringArray: ["C++", "algorithm", "CS", "math"],
+
+        logoArray: ["C++"],
+        link: "https://github.com/Hasuzawa/articles_researches",
+        long_description: `This is not a web-dev project. Here I collect publish some simple algorithm, useful references
+            to brush up my knowledge. This is an ever-ongoing project without end.`
+    },
+    {
         projectName: "3d-dice-thrower",
-        HTML_id: "3d-dice-thrower",
+        HTML_id: "project-5",
         heading: "3D animation on website",
         year: "2021",
 
